@@ -13,6 +13,9 @@
 		F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A552A37574E00F61AA9 /* ContentView.swift */; };
 		F8413A582A37574F00F61AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A572A37574F00F61AA9 /* Assets.xcassets */; };
 		F8413A5C2A37574F00F61AA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */; };
+		F8413A672A379C7C00F61AA9 /* ActivityTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A662A379C7C00F61AA9 /* ActivityTimer.swift */; };
+		F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A692A379CA300F61AA9 /* ButtonComponent.swift */; };
+		F8413A6C2A379CC600F61AA9 /* HowAreYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F8413A572A37574F00F61AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8413A592A37574F00F61AA9 /* MiniME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniME.entitlements; sourceTree = "<group>"; };
 		F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8413A662A379C7C00F61AA9 /* ActivityTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimer.swift; sourceTree = "<group>"; };
+		F8413A692A379CA300F61AA9 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowAreYouView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +62,16 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
+				F8413A682A379C9300F61AA9 /* Components */,
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				F8413A502A37574E00F61AA9 /* Persistence.swift */,
 				F8413A552A37574E00F61AA9 /* ContentView.swift */,
+				F8413A662A379C7C00F61AA9 /* ActivityTimer.swift */,
 				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
 				F8413A5A2A37574F00F61AA9 /* Preview Content */,
+				F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */,
 			);
 			path = MiniME;
 			sourceTree = "<group>";
@@ -73,6 +82,14 @@
 				F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8413A682A379C9300F61AA9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F8413A692A379CA300F61AA9 /* ButtonComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8413A672A379C7C00F61AA9 /* ActivityTimer.swift in Sources */,
+				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
+				F8413A6C2A379CC600F61AA9 /* HowAreYouView.swift in Sources */,
 				F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 			);
