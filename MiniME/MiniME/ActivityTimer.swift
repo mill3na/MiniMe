@@ -14,15 +14,24 @@ let timer = Timer
 struct ActivityTimerView: View {
     @State var counter: Int = 0
     @State var isPaused: Bool = false
-    @State private var showingSheet = false
+    @State private var showingSheet: Bool = false
+    @State private var isPlaying: Bool = false
+    var countTo: Int = 120 // change this parameter when calling the view. This is the time in minutes.
     
-    var countTo: Int = 120
+    
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "music.note")
-                    .frame(width: 20, height: 20)
-                    .padding(20)
+                Button {
+                    self.isPlaying.toggle()
+                    
+                } label: {
+                    Image(systemName: self.isPlaying == true ? "play.slash.fill" : "music.note")
+                          .resizable()
+                          .frame(width: 20, height: 20)
+                          .padding(20)
+                }
+
                 Spacer()
             }
             Spacer()
