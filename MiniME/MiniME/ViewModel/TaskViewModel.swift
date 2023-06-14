@@ -18,6 +18,8 @@ class TaskViewModel: ObservableObject {
     private var database: CKDatabase
     private var container: CKContainer
     
+    @Published var items: [TaskListViewModel] = []
+    
     init(container: CKContainer) {
         self.container = container
         self.database = self.container.publicCloudDatabase // pubic let us read the values. Private requires an account
@@ -45,4 +47,53 @@ class TaskViewModel: ObservableObject {
         }
         
     }
+    
+    // MARK: -- function to fetch tasks
+    func populateTasks() {
+        
+        var taskList: [Task] = []
+        //predicate is true because we want to get everything
+        var query = CKQuery(recordType: RecordType.task.rawValue, predicate: NSPredicate(value: true))
+        
+        database.fetch(withQuery: query) { result in
+            switch result {
+            case .success(let result):
+//                 these results return an array of tuples (help)
+                result.matchResults.compactMap{ $0.1 } // gets the first element of the tuple
+                    .forEach {
+                        switch $0 {
+                        case .success(let record):
+                            // print(record) // finally gets the record here, but still not a task. We gotta covert
+                            if let tasks = Task.fromRecord(record) {
+                                taskList.append(tasks)
+                            }
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                DispatchQueue.main.async {
+                    self.items = taskList.map(TaskListViewModel.init)
+                }
+//
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+        
+    }
+}
+
+struct TaskListViewModel {
+    let task: Task
+    
+    var title: String {
+        task.title
+    }
+    
+    var recordId: CKRecord.ID? {
+        task.id
+    }
+    
+    
 }
