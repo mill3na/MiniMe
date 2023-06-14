@@ -1,0 +1,39 @@
+//
+//  TimerViewModel.swift
+//  MiniME
+//
+//  Created by Marília de Sousa on 14/06/23.
+//
+
+import SwiftUI
+
+class TimerViewModel: ObservableObject {
+    @Published var selectedHoursAmount = 10
+    @Published var selectedMinutesAmount = 10
+    @Published var selectedSecondsAmount = 10
+    
+    let hoursRange = 0...23
+    let minutesRange = 0...59
+    let secondsRange = 0...59
+}
+
+struct TimerView: View {
+    @StateObject private var model = TimerViewModel()
+    var body: some View {
+        HStack(){
+            TimerPickerView(title: "horas",
+                            range: model.hoursRange,
+                            binding: $model.selectedHoursAmount)
+            TimerPickerView(title: "min",
+                            range: model.minutesRange,
+                            binding: $model.selectedMinutesAmount)
+            TimerPickerView(title: "s",
+                            range: model.secondsRange,
+                            binding: $model.selectedHoursAmount)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//        .background(.black)
+        .foregroundColor(.black)
+    }
+}
+

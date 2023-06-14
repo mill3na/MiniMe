@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D90E8CF2A39DF27008FD186 /* NovAtividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */; };
+		0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D12A39E201008FD186 /* TimerPickerView.swift */; };
+		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
+		0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */; };
+		0D90E8D82A39E2C8008FD186 /* PickerModoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */; };
 		F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */; };
 		F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A502A37574E00F61AA9 /* Persistence.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovAtividade.swift; sourceTree = "<group>"; };
+		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPropriedadeView.swift; sourceTree = "<group>"; };
+		0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModoView.swift; sourceTree = "<group>"; };
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
 		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -37,6 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D90E8D02A39DF74008FD186 /* PickersNovAtividade */ = {
+			isa = PBXGroup;
+			children = (
+				0D90E8D12A39E201008FD186 /* TimerPickerView.swift */,
+				0D90E8D32A39E255008FD186 /* TimerViewModel.swift */,
+				0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */,
+				0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */,
+			);
+			path = PickersNovAtividade;
+			sourceTree = "<group>";
+		};
 		F8413A422A37574E00F61AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +80,8 @@
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				F8413A502A37574E00F61AA9 /* Persistence.swift */,
 				F8413A552A37574E00F61AA9 /* ContentView.swift */,
+				0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */,
+				0D90E8D02A39DF74008FD186 /* PickersNovAtividade */,
 				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
@@ -145,10 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */,
+				0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */,
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
 				F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */,
+				0D90E8CF2A39DF27008FD186 /* NovAtividade.swift in Sources */,
+				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
+				0D90E8D82A39E2C8008FD186 /* PickerModoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniME/Preview Content\"";
-				DEVELOPMENT_TEAM = 88KH7Y2P56;
+				DEVELOPMENT_TEAM = QXKC9DK2A8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -287,7 +315,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -295,7 +323,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,7 +355,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -333,7 +363,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
