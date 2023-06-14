@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		64BF18812A39DF4100C41AA7 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18802A39DF4100C41AA7 /* AtividadesView.swift */; };
 		64BF18832A39DFAC00C41AA7 /* AtividadesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */; };
+		64BF18852A39E1FF00C41AA7 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */; };
+		64BF18872A39E22400C41AA7 /* BotaoParaSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */; };
 		F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */; };
 		F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A502A37574E00F61AA9 /* Persistence.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		64BF18802A39DF4100C41AA7 /* AtividadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
 		64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesModel.swift; sourceTree = "<group>"; };
+		64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
+		64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoParaSheet.swift; sourceTree = "<group>"; };
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
 		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				64BF18802A39DF4100C41AA7 /* AtividadesView.swift */,
 				64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */,
+				64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */,
+				64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */,
 				F8413A502A37574E00F61AA9 /* Persistence.swift */,
 				F8413A552A37574E00F61AA9 /* ContentView.swift */,
 				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
@@ -152,9 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64BF18812A39DF4100C41AA7 /* AtividadesView.swift in Sources */,
+				64BF18872A39E22400C41AA7 /* BotaoParaSheet.swift in Sources */,
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
 				64BF18832A39DFAC00C41AA7 /* AtividadesModel.swift in Sources */,
+				64BF18852A39E1FF00C41AA7 /* EmotionsView.swift in Sources */,
 				F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 			);
