@@ -18,6 +18,16 @@ struct ContentView: View {
     init(viewModel: TaskViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
+    
+    func deleteItem(_ indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let task = viewModel.items[index]
+            if let recordId = task.recordId {
+                viewModel.deleteTask(recordId)
+            }
+        }
+        
+    }
 
     var body: some View {
         NavigationView {
@@ -31,13 +41,23 @@ struct ContentView: View {
                     
                 } label: {
                     Text("Save")
-                }
+                }.disabled(title.trimmingCharacters(in: .whitespaces).isEmpty)
                 
                 Spacer()
                 
+                List {
+                    ForEach(viewModel.items, id: \.recordId) { item in
+                        HStack {
+                            Text(item.title)
+                        }
+                    }.onDelete(perform: deleteItem)
+                }
                     .navigationTitle("CloudKit Poc")
             }
             .padding()
+            .onAppear {
+                viewModel.populateTasks()
+            }
         }
     }
 }

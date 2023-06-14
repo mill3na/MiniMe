@@ -25,6 +25,17 @@ class TaskViewModel: ObservableObject {
         self.database = self.container.publicCloudDatabase // pubic let us read the values. Private requires an account
     }
     
+    func deleteTask(_ recordId: CKRecord.ID) {
+        database.delete(withRecordID: recordId) { deletedRecordId, error in
+            if let error = error {
+                print(error)
+            } else {
+                self.populateTasks()
+            }
+        }
+        
+    }
+    
     func saveTask(title: String) {
         // create a cloud kit record so we can save our tasks based on an enum that tells us what record type it is
         let record = CKRecord(recordType: RecordType.task.rawValue)
@@ -41,6 +52,12 @@ class TaskViewModel: ObservableObject {
                 print(error)
             } else {
                 if let newRecord = newRecord {
+                    if let task = Task.fromRecord(newRecord) {
+                        DispatchQueue.main.async {
+                            self.items.append(TaskListViewModel(task: task))
+                        }
+                        
+                    }
                     print("Saved as: \(newRecord)")
                 }
             }
