@@ -7,44 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */; };
-		F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2272A38FE360034E761 /* TaskViewModel.swift */; };
-		F82AB22B2A3A390A0034E761 /* CloudKitPocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */; };
-		0D90E8CF2A39DF27008FD186 /* NovAtividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */; };
+		0D90E8CF2A39DF27008FD186 /* AdicionarAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8CE2A39DF27008FD186 /* AdicionarAtividadeView.swift */; };
 		0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D12A39E201008FD186 /* TimerPickerView.swift */; };
 		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
 		0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */; };
 		0D90E8D82A39E2C8008FD186 /* PickerModoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */; };
+		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
+		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		64BF18812A39DF4100C41AA7 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18802A39DF4100C41AA7 /* AtividadesView.swift */; };
 		64BF18832A39DFAC00C41AA7 /* AtividadesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */; };
 		64BF18852A39E1FF00C41AA7 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */; };
-		64BF18872A39E22400C41AA7 /* BotaoParaSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */; };
 		F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */; };
 		F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A502A37574E00F61AA9 /* Persistence.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
 		F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A552A37574E00F61AA9 /* ContentView.swift */; };
 		F8413A582A37574F00F61AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A572A37574F00F61AA9 /* Assets.xcassets */; };
-		F8413A5C2A37574F00F61AA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */; };
-		F8413A672A379C7C00F61AA9 /* ActivityTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A662A379C7C00F61AA9 /* ActivityTimer.swift */; };
+		F8413A672A379C7C00F61AA9 /* ActivityTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A662A379C7C00F61AA9 /* ActivityTimerView.swift */; };
 		F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A692A379CA300F61AA9 /* ButtonComponent.swift */; };
-		F8413A6C2A379CC600F61AA9 /* HowAreYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
-		F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTaskModel.swift; sourceTree = "<group>"; };
-		F82AB2272A38FE360034E761 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
-		F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPocView.swift; sourceTree = "<group>"; };
-		0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovAtividade.swift; sourceTree = "<group>"; };
+		0D90E8CE2A39DF27008FD186 /* AdicionarAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarAtividadeView.swift; sourceTree = "<group>"; };
 		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPropriedadeView.swift; sourceTree = "<group>"; };
 		0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModoView.swift; sourceTree = "<group>"; };
+		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
+		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		64BF18802A39DF4100C41AA7 /* AtividadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
 		64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesModel.swift; sourceTree = "<group>"; };
 		64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
-		64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoParaSheet.swift; sourceTree = "<group>"; };
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
 		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -52,10 +44,8 @@
 		F8413A552A37574E00F61AA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8413A572A37574F00F61AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8413A592A37574F00F61AA9 /* MiniME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniME.entitlements; sourceTree = "<group>"; };
-		F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F8413A662A379C7C00F61AA9 /* ActivityTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimer.swift; sourceTree = "<group>"; };
+		F8413A662A379C7C00F61AA9 /* ActivityTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerView.swift; sourceTree = "<group>"; };
 		F8413A692A379CA300F61AA9 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
-		F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowAreYouView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,33 +59,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
-		F82AB2232A38BA6A0034E761 /* Model */ = {
+		64BF18882A3B3C6500C41AA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */,
+				F8413A552A37574E00F61AA9 /* ContentView.swift */,
+				6459E0C02A3B4E68002409D6 /* MinimeView.swift */,
+				6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */,
+				0D90E8CE2A39DF27008FD186 /* AdicionarAtividadeView.swift */,
+				64BF18802A39DF4100C41AA7 /* AtividadesView.swift */,
+				F8413A662A379C7C00F61AA9 /* ActivityTimerView.swift */,
+				64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64BF18892A3B3CC600C41AA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F82AB2262A38FE190034E761 /* ViewModel */ = {
+		64BF188A2A3B3D0400C41AA7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F82AB2272A38FE360034E761 /* TaskViewModel.swift */,
+				F8413A502A37574E00F61AA9 /* Persistence.swift */,
+				0D90E8D32A39E255008FD186 /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0D90E8D02A39DF74008FD186 /* PickersNovAtividade */ = {
+		64BF188B2A3B45C100C41AA7 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				0D90E8D12A39E201008FD186 /* TimerPickerView.swift */,
-				0D90E8D32A39E255008FD186 /* TimerViewModel.swift */,
-				0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */,
-				0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */,
+				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 			);
-			path = PickersNovAtividade;
-
+			path = Application;
+			sourceTree = "<group>";
+		};
+		64BF188C2A3B45DA00C41AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F8413A422A37574E00F61AA9 = {
@@ -117,9 +125,10 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
-
-				F82AB2262A38FE190034E761 /* ViewModel */,
-				F82AB2232A38BA6A0034E761 /* Model */,
+				64BF188B2A3B45C100C41AA7 /* Application */,
+				64BF188A2A3B3D0400C41AA7 /* ViewModel */,
+				64BF18892A3B3CC600C41AA7 /* Model */,
+				64BF18882A3B3C6500C41AA7 /* View */,
 				F8413A682A379C9300F61AA9 /* Components */,
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				64BF18802A39DF4100C41AA7 /* AtividadesView.swift */,
@@ -135,24 +144,18 @@
 				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
-				F8413A5A2A37574F00F61AA9 /* Preview Content */,
-				F8413A6B2A379CC600F61AA9 /* HowAreYouView.swift */,
 			);
 			path = MiniME;
-			sourceTree = "<group>";
-		};
-		F8413A5A2A37574F00F61AA9 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		F8413A682A379C9300F61AA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				F8413A692A379CA300F61AA9 /* ButtonComponent.swift */,
+				0D90E8D12A39E201008FD186 /* TimerPickerView.swift */,
+				0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */,
+				0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */,
+				64BF188C2A3B45DA00C41AA7 /* Resources */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8413A5C2A37574F00F61AA9 /* Preview Assets.xcassets in Resources */,
 				F8413A582A37574F00F61AA9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,23 +229,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */,
 				0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */,
 				64BF18812A39DF4100C41AA7 /* AtividadesView.swift in Sources */,
-				64BF18872A39E22400C41AA7 /* BotaoParaSheet.swift in Sources */,
-				F8413A672A379C7C00F61AA9 /* ActivityTimer.swift in Sources */,
+				F8413A672A379C7C00F61AA9 /* ActivityTimerView.swift in Sources */,
+				6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */,
 				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
 				F82AB22B2A3A390A0034E761 /* CloudKitPocView.swift in Sources */,
-				F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */,
-				F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
 				64BF18832A39DFAC00C41AA7 /* AtividadesModel.swift in Sources */,
 				64BF18852A39E1FF00C41AA7 /* EmotionsView.swift in Sources */,
-				F8413A6C2A379CC600F61AA9 /* HowAreYouView.swift in Sources */,
 				F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */,
-				0D90E8CF2A39DF27008FD186 /* NovAtividade.swift in Sources */,
+				0D90E8CF2A39DF27008FD186 /* AdicionarAtividadeView.swift in Sources */,
+				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 				0D90E8D82A39E2C8008FD186 /* PickerModoView.swift in Sources */,
@@ -371,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniME/Preview Content\"";
-				DEVELOPMENT_TEAM = QXKC9DK2A8;
+				DEVELOPMENT_TEAM = 88KH7Y2P56;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
