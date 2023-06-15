@@ -14,6 +14,7 @@ struct CloudKitPocView: View {
     @StateObject private var viewModel: TaskViewModel
     @State private var title: String = ""
     @State private var priority: String = ""
+    @State private var mode: String = ""
     
     init(viewModel: TaskViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -36,11 +37,14 @@ struct CloudKitPocView: View {
                     .textFieldStyle(.roundedBorder)
                 TextField("Task priority", text: $priority)
                     .textFieldStyle(.roundedBorder)
+                TextField("Task mode", text: $mode)
+                    .textFieldStyle(.roundedBorder)
                 
                 Button {
-                    viewModel.saveTask(title: title, priority: priority)
+                    viewModel.saveTask(title: title, priority: priority, mode: mode)
                     self.title = ""
                     self.priority = ""
+                    self.mode = ""
                     
                 } label: {
                     Text("Save")
@@ -51,9 +55,7 @@ struct CloudKitPocView: View {
                 List {
                     ForEach(viewModel.items, id: \.recordId) { item in
                         HStack {
-                            Text(item.title)
-                            Spacer()
-                            Text(item.priority)
+                            Text("Nome: \(item.title), Prioridade: \(item.priority), Modo: \(item.mode)")
                         }
                     }.onDelete(perform: deleteItem)
                 }
@@ -62,7 +64,7 @@ struct CloudKitPocView: View {
             .padding()
             .onAppear {
                 viewModel.populateTasks()
-                print("ITEMS: \(viewModel.items)")
+//                print("ITEMS: \(viewModel.items)")
             }
         }
     }

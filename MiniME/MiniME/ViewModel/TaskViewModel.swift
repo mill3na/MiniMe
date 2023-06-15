@@ -36,10 +36,10 @@ class TaskViewModel: ObservableObject {
         
     }
     
-    func saveTask(title: String, priority: String) {
+    func saveTask(title: String, priority: String, mode: String) {
         // create a cloud kit record so we can save our tasks based on an enum that tells us what record type it is
         let record = CKRecord(recordType: RecordType.task.rawValue)
-        let task = Task(title: title, priority: priority)
+        let task = Task(title: title, priority: priority, mode: mode)
         
         // saves the values passed as dictionary
         // the function used as parameter above coverts our values from model to dict
@@ -112,6 +112,9 @@ struct TaskListViewModel {
         task.priority
     }
     
+    var mode: String {
+        task.mode
+    }
     
     var recordId: CKRecord.ID? {
         task.id
