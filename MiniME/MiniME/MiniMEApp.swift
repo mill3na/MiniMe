@@ -6,17 +6,14 @@
 //
 
 import SwiftUI
-import CloudKit
 
 @main
 struct MiniMEApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        
-        let container = CKContainer(identifier: "iCloud.miniMe")
         WindowGroup {
-            ContentView(viewModel: TaskViewModel(container: container))
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
