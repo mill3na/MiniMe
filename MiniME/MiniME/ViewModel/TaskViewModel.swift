@@ -28,7 +28,7 @@ class TaskViewModel: ObservableObject {
     func deleteTask(_ recordId: CKRecord.ID) {
         database.delete(withRecordID: recordId) { deletedRecordId, error in
             if let error = error {
-                print(error)
+                print("ERROR: error while deleting task: \(error).")
             } else {
                 self.populateTasks()
             }
@@ -36,10 +36,10 @@ class TaskViewModel: ObservableObject {
         
     }
     
-    func saveTask(title: String) {
+    func saveTask(title: String, priority: String) {
         // create a cloud kit record so we can save our tasks based on an enum that tells us what record type it is
         let record = CKRecord(recordType: RecordType.task.rawValue)
-        let task = Task(title: title)
+        let task = Task(title: title, priority: priority)
         
         // saves the values passed as dictionary
         // the function used as parameter above coverts our values from model to dict
@@ -49,7 +49,7 @@ class TaskViewModel: ObservableObject {
         // now, save in database!
         self.database.save(record) { newRecord, error in
             if let error = error {
-                print(error)
+                print("ERROR: error while saving task: \(error).")
             } else {
                 if let newRecord = newRecord {
                     if let task = Task.fromRecord(newRecord) {
@@ -85,7 +85,7 @@ class TaskViewModel: ObservableObject {
                                 taskList.append(tasks)
                             }
                         case .failure(let error):
-                            print(error)
+                            print("ERROR: error populating cloudkit local instance: \(error).")
                         }
                     }
                 DispatchQueue.main.async {
@@ -107,6 +107,11 @@ struct TaskListViewModel {
     var title: String {
         task.title
     }
+    
+    var priority: String {
+        task.priority
+    }
+    
     
     var recordId: CKRecord.ID? {
         task.id

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */; };
 		F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2272A38FE360034E761 /* TaskViewModel.swift */; };
+		F82AB22B2A3A390A0034E761 /* CloudKitPocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */; };
 		F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */; };
 		F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A502A37574E00F61AA9 /* Persistence.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTaskModel.swift; sourceTree = "<group>"; };
 		F82AB2272A38FE360034E761 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPocView.swift; sourceTree = "<group>"; };
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
 		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
 				F8413A5A2A37574F00F61AA9 /* Preview Content */,
+				F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */,
 			);
 			path = MiniME;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
+				F82AB22B2A3A390A0034E761 /* CloudKitPocView.swift in Sources */,
 				F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */,
 				F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
