@@ -16,7 +16,7 @@ struct CloudKitPocView: View {
     @State private var priority: String = ""
     @State private var mode: String = ""
     @State private var minutesTime: String = ""
-    
+    @State private var errorMessage: String = ""
     init(viewModel: TaskViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -43,9 +43,18 @@ struct CloudKitPocView: View {
                 TextField("Task minute time", text: $minutesTime)
                     .textFieldStyle(.roundedBorder)
                 
+                Text(errorMessage)
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.red)
+                    .padding()
+                
+                
                 Button {
                     
-                    guard let minutesTime = try? Int(minutesTime, format: .number) else { return }
+                    guard let minutesTime = try? Int(minutesTime, format: .number) else {
+                        errorMessage = "ERROR: minute time must be an integer"
+                        return }
                     
                     // MARK: -- make pop up warning with errors
                     
@@ -54,6 +63,7 @@ struct CloudKitPocView: View {
                     self.priority = ""
                     self.mode = ""
                     self.minutesTime = ""
+                    self.errorMessage = ""
                     
                 } label: {
                     Text("Save")
