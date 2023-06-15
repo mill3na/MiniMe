@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+
     
     @State var soundOn = false
     @State private var bgColor = Color.white
@@ -46,6 +47,6 @@ struct CredistsView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MinimeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

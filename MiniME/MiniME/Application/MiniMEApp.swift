@@ -13,7 +13,7 @@ struct MiniMEApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AtividadesView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

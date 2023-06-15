@@ -4,12 +4,12 @@
 //
 //  Created by Marília de Sousa on 14/06/23.
 //
-
+//
 import SwiftUI
 
 struct SegmentedControlModelView: View {
     @State var selected = 1
-    
+
     var body: some View {
         Picker(selection: $selected, label: Text("Picker"),
                content: {

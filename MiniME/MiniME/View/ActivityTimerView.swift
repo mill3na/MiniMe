@@ -80,7 +80,7 @@ struct ActivityTimerView: View {
                         pauseButtonComponent(text: "Pausar", activity: pause)
                         ButtonComponent(text: "Finalizar", activity: endTimer)
                             .sheet(isPresented: $showingSheet) {
-                                HowAreYouView()
+                                FeelingSheet()
                             }
                     }
                 }
@@ -132,12 +132,6 @@ struct ActivityTimerView: View {
     
 }
 
-struct ActivityTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 struct Clock: View {
     var counter: Int
     var countTo: Int
@@ -159,6 +153,11 @@ struct Clock: View {
         
         
     }
-}
 
+    struct ActivityTimerView_Previews: PreviewProvider {
+        static var previews: some View {
+            ActivityTimerView()
+        }
+    }
+}
 

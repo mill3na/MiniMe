@@ -11,7 +11,6 @@ struct AtividadesView: View {
 
     let columns = [
         GridItem(.flexible()),
-
     ]
 
     let atividades: [ActivityModel] = [ActivityModel(titulo: "Yoga", imagem: "mini", hora: "11:00", inicio: "mini"),
