@@ -11,6 +11,7 @@ import CloudKit
 
 struct ContentView: View {
     
+
     @StateObject private var viewModel: TaskViewModel
     @State private var title: String = ""
 //    @State private var id: String = ""
@@ -58,10 +59,40 @@ struct ContentView: View {
             .onAppear {
                 viewModel.populateTasks()
             }
+
+    @State var soundOn = false
+    @State private var bgColor = Color.white
+
+    var body: some View {
+        NavigationView {
+            List {
+                // 1
+                Toggle("Sons", isOn: $soundOn)
+                VStack {
+                    ColorPicker("Cor do MiniMe", selection: $bgColor)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                NavigationLink {
+                    CredistsView()
+                } label: {
+                    Text("Créditos")
+                }
+            }
         }
     }
 }
 
+struct CredistsView: View {
+    var body: some View {
+        VStack {
+            Text("Créditos")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .padding(20)
+            Spacer()
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
 
