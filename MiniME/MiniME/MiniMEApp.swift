@@ -15,7 +15,8 @@ struct MiniMEApp: App {
     var body: some Scene {
         
         WindowGroup {
-            ContentView()
+            let container = CKContainer(identifier: "iCloud.miniMe")
+            ContentView(viewModel: TaskViewModel(container: container))
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
