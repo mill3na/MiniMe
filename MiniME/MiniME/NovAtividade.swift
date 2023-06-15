@@ -31,10 +31,9 @@ struct NovAtividade: View {
                         SegmentedControlModelView()
                     }
                     
-                    
-                    
                     .navigationTitle("Nova Atividade")
                     .labelsHidden()
+                
                     }
                     .navigationBarItems(
                         leading: EditButton(),
