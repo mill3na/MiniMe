@@ -83,11 +83,11 @@
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				F8413A502A37574E00F61AA9 /* Persistence.swift */,
 				F8413A552A37574E00F61AA9 /* ContentView.swift */,
+				F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */,
 				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
 				F8413A5A2A37574F00F61AA9 /* Preview Content */,
-				F82AB22A2A3A390A0034E761 /* CloudKitPocView.swift */,
 			);
 			path = MiniME;
 			sourceTree = "<group>";

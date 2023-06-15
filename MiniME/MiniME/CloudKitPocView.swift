@@ -15,6 +15,7 @@ struct CloudKitPocView: View {
     @State private var title: String = ""
     @State private var priority: String = ""
     @State private var mode: String = ""
+    @State private var minutesTime: String = ""
     
     init(viewModel: TaskViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -39,12 +40,20 @@ struct CloudKitPocView: View {
                     .textFieldStyle(.roundedBorder)
                 TextField("Task mode", text: $mode)
                     .textFieldStyle(.roundedBorder)
+                TextField("Task minute time", text: $minutesTime)
+                    .textFieldStyle(.roundedBorder)
                 
                 Button {
-                    viewModel.saveTask(title: title, priority: priority, mode: mode)
+                    
+                    guard let minutesTime = try? Int(minutesTime, format: .number) else { return }
+                    
+                    // MARK: -- make pop up warning with errors
+                    
+                    viewModel.saveTask(title: title, priority: priority, mode: mode, minutesTime: minutesTime)
                     self.title = ""
                     self.priority = ""
                     self.mode = ""
+                    self.minutesTime = ""
                     
                 } label: {
                     Text("Save")
@@ -55,7 +64,7 @@ struct CloudKitPocView: View {
                 List {
                     ForEach(viewModel.items, id: \.recordId) { item in
                         HStack {
-                            Text("Nome: \(item.title), Prioridade: \(item.priority), Modo: \(item.mode)")
+                            Text("Nome: \(item.title), Prioridade: \(item.priority), Modo: \(item.mode), time: \(item.minutesTime) min")
                         }
                     }.onDelete(perform: deleteItem)
                 }
