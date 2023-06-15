@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 
+		F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */; };
+		F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AB2272A38FE360034E761 /* TaskViewModel.swift */; };
 		0D90E8CF2A39DF27008FD186 /* NovAtividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */; };
 		0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D12A39E201008FD186 /* TimerPickerView.swift */; };
 		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 
+		F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTaskModel.swift; sourceTree = "<group>"; };
+		F82AB2272A38FE360034E761 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		0D90E8CE2A39DF27008FD186 /* NovAtividade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovAtividade.swift; sourceTree = "<group>"; };
 		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -39,7 +43,6 @@
 		64BF18822A39DFAC00C41AA7 /* AtividadesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesModel.swift; sourceTree = "<group>"; };
 		64BF18842A39E1FF00C41AA7 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
 		64BF18862A39E22400C41AA7 /* BotaoParaSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoParaSheet.swift; sourceTree = "<group>"; };
-
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
 		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -64,6 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		F82AB2232A38BA6A0034E761 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F82AB2242A38BA770034E761 /* CloudKitTaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F82AB2262A38FE190034E761 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F82AB2272A38FE360034E761 /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
 		0D90E8D02A39DF74008FD186 /* PickersNovAtividade */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +91,7 @@
 				0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */,
 			);
 			path = PickersNovAtividade;
+
 			sourceTree = "<group>";
 		};
 		F8413A422A37574E00F61AA9 = {
@@ -94,6 +113,9 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
+
+				F82AB2262A38FE190034E761 /* ViewModel */,
+				F82AB2232A38BA6A0034E761 /* Model */,
 				F8413A682A379C9300F61AA9 /* Components */,
 				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
 				64BF18802A39DF4100C41AA7 /* AtividadesView.swift */,
@@ -208,6 +230,8 @@
 				F8413A672A379C7C00F61AA9 /* ActivityTimer.swift in Sources */,
 				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
 				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
+				F82AB2282A38FE360034E761 /* TaskViewModel.swift in Sources */,
+				F82AB2252A38BA770034E761 /* CloudKitTaskModel.swift in Sources */,
 				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
 				64BF18832A39DFAC00C41AA7 /* AtividadesModel.swift in Sources */,
 				64BF18852A39E1FF00C41AA7 /* EmotionsView.swift in Sources */,
