@@ -17,10 +17,11 @@ struct NovAtividade: View {
     @StateObject var viewModel: TaskViewModel
     @State private var title: String = ""
 
+    @State var didSaveTask = false
     
     var body: some View {
         VStack {
-            NavigationView {
+            NavigationStack {
                 Form {
                     Section(header: Text("")){
                         TextField("Nome da Atividade", text: $title)
@@ -51,9 +52,12 @@ struct NovAtividade: View {
                             let minutesTime = TimerViewModel().selectedMinutesAmount
                             viewModel.saveTask(title: title, priority: String(selectedPriority), mode: String(selectedMode), minutesTime: minutesTime)
                             self.title = ""
-
+                            didSaveTask = true
                         } label: {
-                            NavigationLink("Add", destination: AtividadesView())
+                            Text("Add")
+                        }
+                        .navigationDestination(isPresented: $didSaveTask) {
+                            AtividadesView()
                         }
                     }
                 }

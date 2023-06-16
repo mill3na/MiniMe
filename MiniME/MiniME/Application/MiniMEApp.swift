@@ -10,13 +10,15 @@ import CloudKit
 
 @main
 struct MiniMEApp: App {
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             let container = CKContainer(identifier: "iCloud.miniMe")
-            NovAtividade(viewModel: TaskViewModel(container: container))
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MinimeView()
+//            NovAtividade(viewModel: TaskViewModel(container: container))
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
