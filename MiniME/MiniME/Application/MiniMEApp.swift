@@ -15,6 +15,7 @@ struct MiniMEApp: App {
 
     var body: some Scene {
         WindowGroup {
+
             let container = CKContainer(identifier: "iCloud.miniMe")
             MinimeView()
 //            NovAtividade(viewModel: TaskViewModel(container: container))
