@@ -51,10 +51,9 @@ struct NovAtividade: View {
                             let minutesTime = TimerViewModel().selectedMinutesAmount
                             viewModel.saveTask(title: title, priority: String(selectedPriority), mode: String(selectedMode), minutesTime: minutesTime)
                             self.title = ""
-                            listCloudKitItems(viewModel: TaskViewModel(container: self.container))
 
                         } label: {
-                            Text("Adicionar")
+                            NavigationLink("Add", destination: AtividadesView())
                         }
                     }
                 }
@@ -78,35 +77,3 @@ struct NovAtividade: View {
         }
     }
 
-struct listCloudKitItems: View {
-    
-    @StateObject var viewModel: TaskViewModel
-    
-    init(viewModel: TaskViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
-    
-    func deleteItem(_ indexSet: IndexSet) {
-        indexSet.forEach { index in
-            let task = viewModel.items[index]
-            if let recordId = task.recordId {
-                viewModel.deleteTask(recordId)
-            }
-        }
-        
-    }
-    
-    var body: some View {
-        VStack {
-            List {
-                ForEach(viewModel.items, id: \.recordId) { item in
-                    HStack {
-                        Text("Nome: \(item.title), Prioridade: \(item.priority), Modo: \(item.mode), time: \(item.minutesTime) min")
-                    }
-                }.onDelete(perform: deleteItem)
-            }
-        } .onAppear {
-            viewModel.populateTasks()
-        }
-    }
-}
