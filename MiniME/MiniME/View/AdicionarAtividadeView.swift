@@ -73,9 +73,9 @@ struct NovAtividade: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             let selectedPriority = SegmentedControlView().selected
-                            let selectedMode = SegmentedControlModelView().selected
+//                            let selectedMode = ToggleView(title: <#String#>, description: <#String#>, isOn: <#Binding<Bool>#>).selected
                             let minutesTime = TimerViewModel().selectedMinutesAmount
-                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: String(selectedMode), minutesTime: minutesTime)
+                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: "", minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
                         } label: {

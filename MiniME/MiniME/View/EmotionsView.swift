@@ -41,13 +41,13 @@ struct FeelingSheet: View {
                                         triste = false
                                         muitoFeliz = false
                                         muitoTriste = false
-                            }
+                                    }
+                                }
                         }
-                    }
                 }
                 .padding(.leading, 60)
                 Spacer()
-
+                
                 Button {
                     triste.toggle()
                 } label: {
@@ -70,7 +70,7 @@ struct FeelingSheet: View {
                         }
                 }
                 Spacer()
-
+                
                 Button {
                     muitoFeliz.toggle()
                 } label: {
@@ -89,54 +89,54 @@ struct FeelingSheet: View {
                                         triste = false
                                         muitoTriste = false
                                     }
+                                }
                         }
+                    Spacer()
+                    
+                    Button {
+                        muitoTriste.toggle()
+                    } label: {
+                        Image(systemName: "face.smiling")
+                            .font(.system(size: 25))
+                            .foregroundColor(.black)
+                            .background {
+                                Rectangle()
+                                    .frame(width: 80, height: 60)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+                                    .onChange(of: muitoTriste) { newValue in
+                                        if muitoTriste == true {
+                                            feliz = false
+                                            triste = false
+                                            muitoFeliz = false
+                                        }
+                                    }
+                            }
+                    }
+                    .padding(.trailing, 60)
                 }
-                Spacer()
-
+                
                 Button {
-                    muitoTriste.toggle()
+                    //                activity()
                 } label: {
-                    Image(systemName: "face.smiling")
-                        .font(.system(size: 25))
+                    Text("Continuar")
+                    
                         .foregroundColor(.black)
                         .background {
                             Rectangle()
-                                .frame(width: 80, height: 60)
+                                .frame(width: 150, height: 60)
                                 .foregroundColor(.white)
                                 .cornerRadius(12)
-                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
-                                .onChange(of: muitoTriste) { newValue in
-                                    if muitoTriste == true {
-                                        feliz = false
-                                        triste = false
-                                        muitoFeliz = false
-                                    }
-                                }
+                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
                         }
+                    
                 }
-                .padding(.trailing, 60)
+                .padding(.top, 100)
+                
             }
-
-            Button {
-                //                activity()
-            } label: {
-                Text("Continuar")
-
-                    .foregroundColor(.black)
-                    .background {
-                        Rectangle()
-                            .frame(width: 150, height: 60)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
-                    }
-
-            }
-            .padding(.top, 100)
-
         }
     }
-
 }
 
 struct FeelingSheet_Previews: PreviewProvider {
