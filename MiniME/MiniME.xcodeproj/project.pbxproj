@@ -10,13 +10,9 @@
 		0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D12A39E201008FD186 /* TimerPickerView.swift */; };
 		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
 		0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */; };
-<<<<<<< Updated upstream
 		0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D92A3BE564008FD186 /* ToggleView.swift */; };
-=======
-		0D90E8D82A39E2C8008FD186 /* PickerModoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */; };
-		49D7D33E2A3C8CF800604DA3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7D33D2A3C8CF800604DA3 /* OnboardingView.swift */; };
-		49D7D3422A3CBE8F00604DA3 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49D7D3412A3CBE8E00604DA3 /* MoreSugarThin-rgEwB.otf */; };
->>>>>>> Stashed changes
+		49145CB02A3D0B9B00CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CAF2A3D0B9B00CE1E44 /* MoreSugarThin-rgEwB.otf */; };
+		49145CB22A3D0BB700CE1E44 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49145CB12A3D0BB700CE1E44 /* OnboardingView.swift */; };
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -40,14 +36,9 @@
 		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPropriedadeView.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		0D90E8D92A3BE564008FD186 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
-=======
-		0D90E8D72A39E2C8008FD186 /* PickerModoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModoView.swift; sourceTree = "<group>"; };
-		49D7D33D2A3C8CF800604DA3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingView.swift; path = "../../../../MiniMe-develop/MiniME/MiniME/View/OnboardingView.swift"; sourceTree = "<group>"; };
-		49D7D3412A3CBE8E00604DA3 /* MoreSugarThin-rgEwB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoreSugarThin-rgEwB.otf"; sourceTree = "<group>"; };
-		49D7D3432A3CBEFF00604DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
->>>>>>> Stashed changes
+		49145CAF2A3D0B9B00CE1E44 /* MoreSugarThin-rgEwB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MoreSugarThin-rgEwB.otf"; path = "../../../../../../Downloads/more-sugar-cufonfonts/MoreSugarThin-rgEwB.otf"; sourceTree = "<group>"; };
+		49145CB12A3D0BB700CE1E44 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -91,7 +82,6 @@
 		64BF18882A3B3C6500C41AA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				49D7D33D2A3C8CF800604DA3 /* OnboardingView.swift */,
 				F8369B5F2A3B5B660083991D /* ActivityTimerView.swift */,
 				F8369B5B2A3B5B660083991D /* AdicionarAtividadeView.swift */,
 				F8369B5C2A3B5B660083991D /* AtividadesView.swift */,
@@ -100,6 +90,7 @@
 				6459E0C02A3B4E68002409D6 /* MinimeView.swift */,
 				6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */,
 				F8369B722A3B96F50083991D /* CloudKitPocView.swift */,
+				49145CB12A3D0BB700CE1E44 /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,7 +125,7 @@
 		64BF188C2A3B45DA00C41AA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				49D7D3412A3CBE8E00604DA3 /* MoreSugarThin-rgEwB.otf */,
+				49145CAF2A3D0B9B00CE1E44 /* MoreSugarThin-rgEwB.otf */,
 				F8369B592A3B5AFB0083991D /* Assets.xcassets */,
 				6459E0C52A3C816F002409D6 /* Preview Content */,
 			);
@@ -160,7 +151,6 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
-				49D7D3432A3CBEFF00604DA3 /* Info.plist */,
 				64BF188B2A3B45C100C41AA7 /* Application */,
 				64BF188A2A3B3D0400C41AA7 /* ViewModel */,
 				64BF18892A3B3CC600C41AA7 /* Model */,
@@ -243,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */,
-				49D7D3422A3CBE8F00604DA3 /* MoreSugarThin-rgEwB.otf in Resources */,
+				49145CB02A3D0B9B00CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */,
 				F8369B5A2A3B5AFB0083991D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +258,8 @@
 				F8369B612A3B5B660083991D /* AtividadesView.swift in Sources */,
 				F8369B632A3B5B660083991D /* EmotionsView.swift in Sources */,
 				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
+				49145CB22A3D0BB700CE1E44 /* OnboardingView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
-				49D7D33E2A3C8CF800604DA3 /* OnboardingView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 				F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */,
 				F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */,
