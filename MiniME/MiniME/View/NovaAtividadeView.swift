@@ -39,7 +39,7 @@ struct NovaAtividadeView: View {
                 Button {
                     //                activity()
                 } label: {
-                    Text("Minhas atividade")
+                    Text("Minhas atividades")
 
                         .foregroundColor(.black)
                         .background {
