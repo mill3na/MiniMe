@@ -21,7 +21,7 @@ struct NovAtividade: View {
     
     var body: some View {
         VStack {
-            NavigationStack {
+//            NavigationStack {
                 Form {
                     Section(header: Text("")){
                         TextField("Nome da Atividade", text: $title)
@@ -59,6 +59,7 @@ struct NovAtividade: View {
                         .navigationDestination(isPresented: $didSaveTask) {
                             AtividadesView()
                         }
+//                        .navigationBarBackButtonHidden()
                     }
                 }
 //                    .navigationBarItems(
@@ -70,7 +71,7 @@ struct NovAtividade: View {
 //                                            //Text("Destination"))
 //                    )
             }
-            }
+//            }
         }
         
             struct NovAtividade_Previews: PreviewProvider {
