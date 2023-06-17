@@ -139,7 +139,8 @@ struct listCloudKitItems: View {
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
-                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
+                            Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
+//                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
                                 .font(.title3)
                                 .fontWeight(.regular)
                                 
