@@ -15,14 +15,24 @@ struct NovAtividade: View {
     @State private var modoToggle1 = false
     @State private var modoToggle2 = false
     @State private var modoToggle3 = false
-
-  
-    let container = CKContainer(identifier: "iCloud.miniMe")
-    @StateObject var viewModel: TaskViewModel
     @State private var title: String = ""
-
     @State var didSaveTask = false
+    @State var priority: String = "Alta"
+    @StateObject var viewModel: TaskViewModel
+    @StateObject private var timerModel = TimerViewModel()
     
+    let container = CKContainer(identifier: "iCloud.miniMe")
+
+    func checkMode() -> String {
+        if self.modoToggle1 == true {
+            return "Vamos juntos"
+        } else if self.modoToggle2 == true {
+            return "Chego já"
+        } else {
+            return "Fico olhando"
+        }
+    }
+
     var body: some View {
         VStack {
             NavigationStack {
@@ -32,11 +42,20 @@ struct NovAtividade: View {
                     }
 
                     Section(header: Text("Tempo da Atividade")){
-                        TimerView()
+                        TimerView(model: timerModel)
                     }
 
                     Section(header: Text("Prioridade")){
-                        SegmentedControlView()
+                        Picker (
+                        selection: $priority,
+                        label: Text("PRIORIDADE"),
+                        content: {
+                            Text("Alta").tag("Alta")
+                            Text("Média").tag("Média")
+                            Text("Baixa").tag("Baixa")
+                            
+                        }).pickerStyle(SegmentedPickerStyle())
+                        
                     }
                     Section(header: Text("Modo")){
                         ToggleView(title: "Vamos juntos", description: "Lembretes a cada 10 min", isOn: $modoToggle1)
@@ -72,10 +91,9 @@ struct NovAtividade: View {
                     // 2
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            let selectedPriority = SegmentedControlView().selected
-//                            let selectedMode = ToggleView(title: <#String#>, description: <#String#>, isOn: <#Binding<Bool>#>).selected
-                            let minutesTime = TimerViewModel().selectedMinutesAmount
-                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: "", minutesTime: minutesTime)
+                            let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
+                            print("PRIORITY: \(priority)")
+                            viewModel.saveTask(title: title, priority: String(priority), mode: checkMode(), minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
                         } label: {
@@ -106,3 +124,25 @@ struct NovAtividade: View {
         }
     }
 
+struct PriorityPicker: View {
+    @State var priority: String = "Alta"
+    
+    var body: some View {
+        
+        VStack {
+            Picker (
+            selection: $priority,
+            label: Text("PRIORIDADE"),
+            content: {
+                Text("Alta").tag("Alta")
+                Text("Média").tag("Media")
+                Text("Baixa").tag("Baixa")
+                
+            }).pickerStyle(SegmentedPickerStyle())
+            
+            HStack {
+                Text("Selectec: \(priority)")
+            }
+        }
+    }
+}

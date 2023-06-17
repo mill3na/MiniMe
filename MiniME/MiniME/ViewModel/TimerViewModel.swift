@@ -7,18 +7,21 @@
 
 import SwiftUI
 
+
+
 class TimerViewModel: ObservableObject {
-    @Published var selectedHoursAmount = 10
-    @Published var selectedMinutesAmount = 10
-    @Published var selectedSecondsAmount = 10
     
+    @Published var selectedHoursAmount = 0
+    @Published var selectedMinutesAmount = 0
+    @Published var selectedSecondsAmount = 0
+
     let hoursRange = 0...23
     let minutesRange = 0...59
     let secondsRange = 0...59
 }
 
 struct TimerView: View {
-    @StateObject private var model = TimerViewModel()
+    @ObservedObject var model: TimerViewModel
     var body: some View {
         HStack(){
             TimerPickerView(title: "horas",

@@ -16,7 +16,7 @@ struct ActivityTimerView: View {
     @State var isPaused: Bool = false
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
-    var countTo: Int = 120 // change this parameter when calling the view. This is the time in minutes.
+    var countTo: Int // change this parameter when calling the view. This is the time in minutes.
     
     
     var body: some View {
@@ -156,7 +156,7 @@ struct Clock: View {
 
     struct ActivityTimerView_Previews: PreviewProvider {
         static var previews: some View {
-            ActivityTimerView()
+            ActivityTimerView(countTo: 0)
         }
     }
 }

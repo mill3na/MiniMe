@@ -109,35 +109,54 @@ struct listCloudKitItems: View {
         
     }
     
+    func priorityColor(priority: String) -> Color {
+        var selectedColor = Color.gray
+        if priority == "Alta" {
+            selectedColor = Color.red
+        } else if priority == "Media" || priority == "Média" {
+            selectedColor = Color.yellow
+        } else {
+            selectedColor = Color.green
+        }
+        return selectedColor.opacity(0.6)
+    }
+    
     var body: some View {
         VStack {
             List {
                 ForEach(viewModel.items, id: \.recordId) { item in
                     
                     HStack {
-                        Image("mini")
+                        
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 5, height: 70)
+                            .foregroundColor(priorityColor(priority: item.priority))
+                        Image("miniMe-cortado2")
                             .resizable()
-                            .frame(width: 70 , height: 70, alignment: .bottom)
-                            .clipShape(Circle())
+                            .frame(width: 60 , height: 70, alignment: .bottom)
                             .padding(12)
                         VStack (alignment: .leading){
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
-                            Text("\(item.minutesTime)")
+                            Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
+//                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
                                 .font(.title3)
                                 .fontWeight(.regular)
                                 
                         }
 
                         Spacer()
-                        Button {
-                            print("Button pressed")
+                        NavigationLink {
+                            ActivityTimerView(countTo: item.minutesTime)
+                            
                         } label: {
-                            Image(systemName: "play.circle")
-                                .font(.system(size: 25))
-                                .foregroundColor(Color.black)
+//                            Image(systemName: "play.circle")
+//                                .font(.system(size: 25))
+//                                .foregroundColor(Color.black)
                         }
+                        .buttonStyle(.plain)
+                        
                         .padding(12)
                     }
                 }.onDelete(perform: deleteItem)
