@@ -17,6 +17,7 @@ struct NovAtividade: View {
     @State private var modoToggle3 = false
     @State private var title: String = ""
     @State var didSaveTask = false
+    @State var priority: String = "Alta"
     @StateObject var viewModel: TaskViewModel
     @StateObject private var timerModel = TimerViewModel()
     
@@ -45,7 +46,16 @@ struct NovAtividade: View {
                     }
 
                     Section(header: Text("Prioridade")){
-                        SegmentedControlView()
+                        Picker (
+                        selection: $priority,
+                        label: Text("PRIORIDADE"),
+                        content: {
+                            Text("Alta").tag("Alta")
+                            Text("Média").tag("Média")
+                            Text("Baixa").tag("Baixa")
+                            
+                        }).pickerStyle(SegmentedPickerStyle())
+                        
                     }
                     Section(header: Text("Modo")){
                         ToggleView(title: "Vamos juntos", description: "Lembretes a cada 10 min", isOn: $modoToggle1)
@@ -81,9 +91,9 @@ struct NovAtividade: View {
                     // 2
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            let selectedPriority = SegmentedControlView().selected
                             let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
-                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: checkMode(), minutesTime: minutesTime)
+                            print("PRIORITY: \(priority)")
+                            viewModel.saveTask(title: title, priority: String(priority), mode: checkMode(), minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
                         } label: {
@@ -113,3 +123,26 @@ struct NovAtividade: View {
             }
         }
     }
+
+struct PriorityPicker: View {
+    @State var priority: String = "Alta"
+    
+    var body: some View {
+        
+        VStack {
+            Picker (
+            selection: $priority,
+            label: Text("PRIORIDADE"),
+            content: {
+                Text("Alta").tag("Alta")
+                Text("Média").tag("Media")
+                Text("Baixa").tag("Baixa")
+                
+            }).pickerStyle(SegmentedPickerStyle())
+            
+            HStack {
+                Text("Selectec: \(priority)")
+            }
+        }
+    }
+}
