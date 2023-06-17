@@ -123,7 +123,7 @@ struct listCloudKitItems: View {
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
-                            Text("\(item.minutesTime)")
+                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
                                 .font(.title3)
                                 .fontWeight(.regular)
                                 

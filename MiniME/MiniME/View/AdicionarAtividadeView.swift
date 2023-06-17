@@ -15,17 +15,23 @@ struct NovAtividade: View {
     @State private var modoToggle1 = false
     @State private var modoToggle2 = false
     @State private var modoToggle3 = false
-
-  
-    let container = CKContainer(identifier: "iCloud.miniMe")
+    @State private var title: String = ""
+    @State var didSaveTask = false
     @StateObject var viewModel: TaskViewModel
-    
     @StateObject private var timerModel = TimerViewModel()
     
-    @State private var title: String = ""
-    
-    @State var didSaveTask = false
-    
+    let container = CKContainer(identifier: "iCloud.miniMe")
+
+    func checkMode() -> String {
+        if self.modoToggle1 == true {
+            return "Vamos juntos"
+        } else if self.modoToggle2 == true {
+            return "Chego já"
+        } else {
+            return "Fico olhando"
+        }
+    }
+
     var body: some View {
         VStack {
             NavigationStack {
@@ -77,8 +83,7 @@ struct NovAtividade: View {
                         Button {
                             let selectedPriority = SegmentedControlView().selected
                             let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
-                            print("HORAS: \(timerModel.selectedHoursAmount), MINUTOS: \(timerModel.selectedMinutesAmount), SEGUNDOS: \(timerModel.selectedSecondsAmount)")
-                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: "", minutesTime: minutesTime)
+                            viewModel.saveTask(title: title, priority: String(selectedPriority), mode: checkMode(), minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
                         } label: {
@@ -108,4 +113,3 @@ struct NovAtividade: View {
             }
         }
     }
-
