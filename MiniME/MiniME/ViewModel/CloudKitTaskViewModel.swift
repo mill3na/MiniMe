@@ -99,6 +99,19 @@ class TaskViewModel: ObservableObject {
         }
         
     }
+    
+    func calculateTotalMinutes(hours: Int, minutes: Int, seconds: Int) -> Int {
+            let totalSeconds = calculateTotalSeconds(hours: hours, minutes: minutes, seconds: seconds)
+            let totalMinutes = totalSeconds / 60
+            return totalMinutes
+        }
+
+    func calculateTotalSeconds(hours: Int, minutes: Int, seconds: Int) -> Int {
+            let hoursInSeconds = hours * 3600
+            let minutesInSeconds = minutes * 60
+            return hoursInSeconds + minutesInSeconds + seconds
+        }
+    
 }
 
 struct TaskListViewModel {

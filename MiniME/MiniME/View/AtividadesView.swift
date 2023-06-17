@@ -115,10 +115,9 @@ struct listCloudKitItems: View {
                 ForEach(viewModel.items, id: \.recordId) { item in
                     
                     HStack {
-                        Image("mini")
+                        Image("miniMe-cortado2")
                             .resizable()
-                            .frame(width: 70 , height: 70, alignment: .bottom)
-                            .clipShape(Circle())
+                            .frame(width: 60 , height: 70, alignment: .bottom)
                             .padding(12)
                         VStack (alignment: .leading){
                             Text("\(item.title)")
@@ -131,13 +130,16 @@ struct listCloudKitItems: View {
                         }
 
                         Spacer()
-                        Button {
-                            print("Button pressed")
+                        NavigationLink {
+                            ActivityTimerView(countTo: item.minutesTime)
+                            
                         } label: {
-                            Image(systemName: "play.circle")
-                                .font(.system(size: 25))
-                                .foregroundColor(Color.black)
+//                            Image(systemName: "play.circle")
+//                                .font(.system(size: 25))
+//                                .foregroundColor(Color.black)
                         }
+                        .buttonStyle(.plain)
+                        
                         .padding(12)
                     }
                 }.onDelete(perform: deleteItem)

@@ -19,8 +19,11 @@ struct NovAtividade: View {
   
     let container = CKContainer(identifier: "iCloud.miniMe")
     @StateObject var viewModel: TaskViewModel
+    
+    @StateObject private var timerModel = TimerViewModel()
+    
     @State private var title: String = ""
-
+    
     @State var didSaveTask = false
     
     var body: some View {
@@ -32,7 +35,7 @@ struct NovAtividade: View {
                     }
 
                     Section(header: Text("Tempo da Atividade")){
-                        TimerView()
+                        TimerView(model: timerModel)
                     }
 
                     Section(header: Text("Prioridade")){
@@ -73,8 +76,8 @@ struct NovAtividade: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             let selectedPriority = SegmentedControlView().selected
-//                            let selectedMode = ToggleView(title: <#String#>, description: <#String#>, isOn: <#Binding<Bool>#>).selected
-                            let minutesTime = TimerViewModel().selectedMinutesAmount
+                            let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
+                            print("HORAS: \(timerModel.selectedHoursAmount), MINUTOS: \(timerModel.selectedMinutesAmount), SEGUNDOS: \(timerModel.selectedSecondsAmount)")
                             viewModel.saveTask(title: title, priority: String(selectedPriority), mode: "", minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
