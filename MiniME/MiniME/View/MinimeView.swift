@@ -44,8 +44,10 @@ struct MinimeView: View {
                         
                     }
                     
-                }
-                .padding(.top, 70)
+                } .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color("Background-Color")) .ignoresSafeArea()
+                   
+                
 
             }
         }
