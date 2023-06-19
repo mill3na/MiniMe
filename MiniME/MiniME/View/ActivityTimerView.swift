@@ -26,11 +26,10 @@ struct ActivityTimerView: View {
                     self.isPlaying.toggle()
                     
                 } label: {
-                    Image(systemName: self.isPlaying == true ? "speaker.slash.fill" : "speaker.wave.2.fill")
+                    Image(systemName: self.isPlaying == true ? "play.slash.fill" : "music.note")
                           .resizable()
-                          .frame(width: 29, height: 24)
-                          .padding(30)
-                          .accentColor(Color("Button-Color"))
+                          .frame(width: 20, height: 20)
+                          .padding(20)
                 }
 
                 Spacer()
@@ -43,7 +42,7 @@ struct ActivityTimerView: View {
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
                     .overlay(
-                        Circle().stroke(Color("Button-Color"), lineWidth: 35))
+                        Circle().stroke(Color.blue, lineWidth: 35))
                 
                 Circle()
                     .fill(Color.clear)
@@ -57,44 +56,38 @@ struct ActivityTimerView: View {
                                             lineJoin: .round)
                                    )
                             .foregroundColor(
-                                (completed() ? Color.white : Color.white))
+                                (completed() ? Color.blue : Color.white))
                             .animation (
                                 .easeInOut(duration: 0.2))
                     )
                 
                 VStack (spacing: -40) {
-                    Image("Icon-MiniME")
+                    Image("mineMe_feliz")
                         .resizable()
-                        .frame(width: 180, height: 180)
+                        .frame(width: 220, height: 220)
+                    Clock(counter: counter, countTo: countTo)
 
                 }
-                
             }
-            Clock(counter: counter, countTo: countTo)
-                .font(Font.custom("MoreSugarThin", size: 80))
-                .padding()
+            
                 
                 VStack {
-                    Text("MineMe")
-                        .padding()
-                        .font(Font.custom("MoreSugarThin", size: 30))
-                    HStack {
+                    Text("Josefino")
+                        .padding(20)
+                        .font(.title)
+                    
+                    HStack (alignment: .center, spacing: 100) {
                         pauseButtonComponent(text: "Pausar", activity: pause)
-                        Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
-                        
-                        
-                        
                             .sheet(isPresented: $showingSheet) {
                                 FeelingSheet()
                             }
-                    } .padding(90)
-                    
+                    }
                 }
-
+                .padding(20)
             Spacer()
 
-        } .background(Color("Background-Color")) // vstack
+        } // vstack
         .onReceive(timer) { time in
             if isPaused == false {
                 initTimer()
