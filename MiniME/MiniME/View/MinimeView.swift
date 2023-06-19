@@ -10,9 +10,9 @@ import SwiftUI
 import CloudKit
 
 struct MinimeView: View {
-    
+
     let container = CKContainer(identifier: "iCloud.miniMe")
-    
+
     var body: some View {
             NavigationStack{
                 VStack {
@@ -45,11 +45,12 @@ struct MinimeView: View {
                     }
                     
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("Background-Color"))
+                .padding(.top, 70)
+
+            }
         }
     }
-}
+
 struct MinimeView_Previews: PreviewProvider {
     static var previews: some View {
         MinimeView()
