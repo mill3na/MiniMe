@@ -63,7 +63,7 @@ struct ActivityTimerView: View {
                     )
                 
                 VStack (spacing: -40) {
-                    Image("Icon-MiniME")
+                    Image("Icon-miniME")
                         .resizable()
                         .frame(width: 180, height: 180)
 
@@ -76,10 +76,12 @@ struct ActivityTimerView: View {
                 
                 VStack {
                     Text("MineMe")
+                        .foregroundColor(.black)
                         .padding()
                         .font(Font.custom("MoreSugarThin", size: 30))
                     HStack {
                         pauseButtonComponent(text: "Pausar", activity: pause)
+                            .foregroundColor(.white)
                         Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
                         

@@ -31,12 +31,13 @@ struct OnboardingView: View {
                                     .resizable()
                                     .scaledToFit()
                                 
-                                Image("Icon-MiniME")
+                                Image("Icon-miniME")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 0.5*proxy.size.height)
                                 
-                                Text("O MineMe ajudará você \na manter o foco!")
+                                Text("O MiniMe ajudará você \na manter o foco!")
+                                    .foregroundColor(.black)
                                     .font(Font.custom("MoreSugarThin", size: 30))
                                     .multilineTextAlignment(.center)
                                     .padding()
@@ -48,15 +49,17 @@ struct OnboardingView: View {
                                     .scaledToFit()
                                     .frame(height: 0.3*proxy.size.height)
                                 
-                                Image("Icon-MiniME")
+                                Image("Icon-miniME")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 0.5*proxy.size.height)
                                 
                                 Text("Escreva aqui nosso nome")
+                                    .foregroundColor(.black)
                                     .font(Font.custom("MoreSugarThin", size: 30))
                                     .multilineTextAlignment(.center)
                                     .padding()
+                                
                                 
                                 TextField("Digite o nome do seu MiniMe", text: $answer)
                                     .textFieldStyle(.automatic)
@@ -74,13 +77,14 @@ struct OnboardingView: View {
                                     .resizable()
                                     .scaledToFit()
                                 
-                                Image("Icon-MiniME")
+                                Image("Icon-miniME")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(height: 0.5*proxy.size.height)
                                 
                                 
                                 Text("Cadastre e personalize nossas novas atividades")
+                                    .foregroundColor(.black)
                                     .font(Font.custom("MoreSugarThin", size: 30))
                                     .multilineTextAlignment(.center)
                                     .padding()

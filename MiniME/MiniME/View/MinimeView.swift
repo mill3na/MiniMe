@@ -17,12 +17,13 @@ struct MinimeView: View {
             NavigationStack{
                 VStack {
                     
-                    Image("Icon-MiniME")
+                    Image("Icon-miniME")
                         .resizable()
                         .scaledToFit()
                         .padding(1)
                     
-                    Text("MineMe")
+                    Text("MiniMe")
+                        .foregroundColor(.black)
                         .font(Font.custom("MoreSugarThin", size: 30))
                         .padding(28)
                     
