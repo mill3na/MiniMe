@@ -11,6 +11,8 @@ import CloudKit
 
 struct MinimeView: View {
 
+    @AppStorage("username") var username: String = "Anonymous"
+
     let container = CKContainer(identifier: "iCloud.miniMe")
 
     var body: some View {
@@ -41,6 +43,7 @@ struct MinimeView: View {
 
             }
         }
+//        .navigationBarBackButtonHidden()
     }
 }
 

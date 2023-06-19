@@ -17,14 +17,23 @@ struct ActivityTimerView: View {
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
     var countTo: Int // change this parameter when calling the view. This is the time in minutes.
-    
+
+    @State var isFinished: Bool = false
     
     var body: some View {
+        if isFinished {
+            FeelingSheet()
+        } else {
+            timerView
+        }
+    }
+
+    var timerView: some View {
         VStack {
             HStack {
                 Button {
                     self.isPlaying.toggle()
-                    
+
                 } label: {
                     Image(systemName: self.isPlaying == true ? "play.slash.fill" : "music.note")
                           .resizable()
@@ -36,14 +45,14 @@ struct ActivityTimerView: View {
             }
             Spacer()
             Spacer()
-            
+
             ZStack (alignment: .center) {
                 Circle()
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
                     .overlay(
                         Circle().stroke(Color.blue, lineWidth: 35))
-                
+
                 Circle()
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
@@ -60,7 +69,7 @@ struct ActivityTimerView: View {
                             .animation (
                                 .easeInOut(duration: 0.2))
                     )
-                
+
                 VStack (spacing: -40) {
                     Image("mineMe_feliz")
                         .resizable()
@@ -69,19 +78,19 @@ struct ActivityTimerView: View {
 
                 }
             }
-            
-                
+
+
                 VStack {
                     Text("Josefino")
                         .padding(20)
                         .font(.title)
-                    
+
                     HStack (alignment: .center, spacing: 100) {
                         pauseButtonComponent(text: "Pausar", activity: pause)
                         ButtonComponent(text: "Finalizar", activity: endTimer)
-                            .sheet(isPresented: $showingSheet) {
-                                FeelingSheet()
-                            }
+//                            .sheet(isPresented: $showingSheet) {
+//                                FeelingSheet()
+//                            }
                     }
                 }
                 .padding(20)
@@ -116,7 +125,7 @@ struct ActivityTimerView: View {
     func endTimer() {
         self.counter = self.countTo
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.showingSheet.toggle()
+            self.isFinished = true
         }
     }
     

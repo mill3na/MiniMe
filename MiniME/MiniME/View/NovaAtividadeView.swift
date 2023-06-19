@@ -7,51 +7,55 @@
 
 import Foundation
 import SwiftUI
+import CloudKit
 
 struct NovaAtividadeView: View {
 
+    var viewModel = TaskViewModel(container: CKContainer(identifier: "iCloud.miniMe"))
     var body: some View {
-        VStack {
-            Image("minime")
-                .scaledToFit()
-                .frame(width: 300, height: 300)
-                .padding(.bottom, 100)
-                .padding(.top, 150)
-            
-            HStack{
-                Button {
-                    //                activity()
-                } label: {
-                    Text("Nova atividade")
-
-                        .foregroundColor(.black)
-                        .background {
-                            Rectangle()
-                                .frame(width: 150, height: 60)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
-                        }
-
+        NavigationStack {
+            VStack {
+                Image("minime")
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .padding(.bottom, 100)
+                    .padding(.top, 150)
+                
+                HStack{
+                    NavigationLink {
+                        NovAtividade( viewModel: self.viewModel)
+                    } label: {
+                        Text("Nova atividade")
+                        
+                            .foregroundColor(.black)
+                            .background {
+                                Rectangle()
+                                    .frame(width: 150, height: 60)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
+                            }
+                        
+                    }
+                    .padding(.trailing, 60)
+                    
+                    NavigationLink {
+                        AtividadesView()
+                    } label: {
+                        Text("Minhas atividades")
+                        
+                            .foregroundColor(.black)
+                            .background {
+                                Rectangle()
+                                    .frame(width: 150, height: 60)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
+                            }
+                        
+                    }
+                    
                 }
-                .padding(.trailing, 60)
-
-                Button {
-                    //                activity()
-                } label: {
-                    Text("Minhas atividades")
-
-                        .foregroundColor(.black)
-                        .background {
-                            Rectangle()
-                                .frame(width: 150, height: 60)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
-                        }
-
-                }
-
             }
         }
     }
