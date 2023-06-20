@@ -17,7 +17,7 @@ struct MiniMEApp: App {
         WindowGroup {
 
             let container = CKContainer(identifier: "iCloud.miniMe")
-            MinimeView()
+            NovaAtividadeView()
 //            NovAtividade(viewModel: TaskViewModel(container: container))
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

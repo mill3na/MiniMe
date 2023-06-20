@@ -24,64 +24,6 @@ struct AtividadesView: View {
 
     var body: some View {
         listCloudKitItems(viewModel: TaskViewModel(container: self.container))
-//        NavigationView {
-//
-//            ScrollView {
-//
-//                LazyVGrid(columns: columns) {
-//                    ForEach(atividades, id: \.self) { atividade in
-//                        Rectangle()
-//                            .frame(width: 400, height: 100)
-//                            .foregroundColor(Color(red: 235/255, green: 235/255, blue: 235/255))
-//                            .cornerRadius(10)
-//                            .shadow(color: Color.primary.opacity(0.3), radius: 1)
-//                            .overlay {
-//                                HStack{
-//                                    Image(atividade.imagem)
-//                                        .resizable()
-//                                        .frame(width: 70 , height: 70, alignment: .bottom)
-//                                        .clipShape(Circle())
-//                                        .padding(12)
-//
-//                                    VStack(alignment: .leading, spacing: 8) {
-//                                        Text(atividade.titulo)
-//                                            .font(.system(.title2, design: .rounded))
-//                                        Text("11:00 am - 12:00 am")
-//                                    }
-//
-//                                    Spacer()
-//
-//                                    Button {
-//                                        print("Button pressed")
-//                                    } label: {
-//                                        Image(systemName: "play.circle")
-//                                            .font(.system(size: 25))
-//                                            .foregroundColor(Color.black)
-//                                    }
-//                                    .padding(12)
-//                                }
-//                            }
-//                    }
-//                }
-//                Image("tarefas")
-//                    .resizable()
-//                    .frame(width: 200 , height: 220, alignment: .bottom)
-//                    .padding(.top, 150)
-//                    .padding(.trailing, 19)
-//            }
-//
-//            .navigationTitle("Minhas atividades")
-//            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                Button {
-//                    print("Button pressed")
-//                } label: {
-//                    Image(systemName: "plus.circle")
-//                        .foregroundColor(Color.black)
-//                }
-//
-//            }
-//        }
     }
 
     struct AtividadesView_Previews: PreviewProvider {
@@ -163,6 +105,18 @@ struct listCloudKitItems: View {
             }
         } .onAppear {
             viewModel.populateTasks()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    NovAtividade(viewModel: self.viewModel)
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .padding()
+                }
+            }
         }
     }
 }

@@ -17,14 +17,23 @@ struct ActivityTimerView: View {
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
     var countTo: Int // change this parameter when calling the view. This is the time in minutes.
-    
+
+    @State var isFinished: Bool = false
     
     var body: some View {
+        if isFinished {
+            FeelingSheet()
+        } else {
+            timerView
+        }
+    }
+
+    var timerView: some View {
         VStack {
             HStack {
                 Button {
                     self.isPlaying.toggle()
-                    
+
                 } label: {
                     Image(systemName: self.isPlaying == true ? "speaker.slash.fill" : "speaker.wave.2.fill")
                           .resizable()
@@ -37,12 +46,13 @@ struct ActivityTimerView: View {
             }
             Spacer()
             Spacer()
-            
+
             ZStack (alignment: .center) {
                 Circle()
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
                     .overlay(
+
                         Circle().stroke(Color("Button-Color"), lineWidth: 35))
                 
                 Circle()
@@ -61,7 +71,7 @@ struct ActivityTimerView: View {
                             .animation (
                                 .easeInOut(duration: 0.2))
                     )
-                
+
                 VStack (spacing: -40) {
                     Image("Icon-miniME")
                         .resizable()
@@ -84,6 +94,8 @@ struct ActivityTimerView: View {
                             .foregroundColor(.white)
                         Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
+
+                    }
                         
                         
                         
@@ -125,7 +137,7 @@ struct ActivityTimerView: View {
     func endTimer() {
         self.counter = self.countTo
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.showingSheet.toggle()
+            self.isFinished = true
         }
     }
     
