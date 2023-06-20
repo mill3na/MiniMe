@@ -125,8 +125,8 @@ struct FeelingSheet: View {
                     
                 }
                 //mudamos de botao e dismiss para navigation
-                NavigationLink {
-                    NovaAtividadeView()
+                Button {
+                    dismiss()
                 } label: {
                     Text("Continuar")
 

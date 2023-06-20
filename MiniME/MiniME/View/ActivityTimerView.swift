@@ -1,11 +1,5 @@
-//
-//  ContentView.swift
-//  PocCircleProgressView
-//
-//  Created by Milena Maia Araújo on 06/06/23.
-//
-
 import SwiftUI
+import AVFoundation
 
 let timer = Timer
     .publish(every: 1, on: .main, in: .common)
@@ -16,26 +10,22 @@ struct ActivityTimerView: View {
     @State var isPaused: Bool = false
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
-    var countTo: Int // change this parameter when calling the view. This is the time in minutes.
+    @State private var audioPlayer: AVAudioPlayer?
+    var countTo: Int
+    let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
-    @State var isFinished: Bool = false
-    
     var body: some View {
-        if isFinished {
-            FeelingSheet()
-        } else {
-            timerView
-        }
-    }
-
-    var timerView: some View {
         VStack {
             HStack {
                 Button {
                     self.isPlaying.toggle()
-
+                    if self.isPlaying {
+                        playMusic()
+                    } else {
+                        stopMusic()
+                    }
                 } label: {
-                    Image(systemName: self.isPlaying == true ? "speaker.slash.fill" : "speaker.wave.2.fill")
+                    Image(systemName: self.isPlaying ? "speaker.wave.2.fill" : "speaker.slash.fill")
                           .resizable()
                           .frame(width: 29, height: 24)
                           .padding(30)
@@ -52,9 +42,8 @@ struct ActivityTimerView: View {
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
                     .overlay(
-
                         Circle().stroke(Color("Button-Color"), lineWidth: 35))
-                
+
                 Circle()
                     .fill(Color.clear)
                     .frame(width: 250, height: 250)
@@ -78,14 +67,14 @@ struct ActivityTimerView: View {
                         .frame(width: 180, height: 180)
 
                 }
-                
+
             }
             Clock(counter: counter, countTo: countTo)
                 .font(Font.custom("MoreSugarThin", size: 80))
                 .padding()
-                
+
                 VStack {
-                    Text("MineMe")
+                    Text("MiniMe")
                         .foregroundColor(.black)
                         .padding()
                         .font(Font.custom("MoreSugarThin", size: 30))
@@ -94,16 +83,11 @@ struct ActivityTimerView: View {
                             .foregroundColor(.white)
                         Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
-
-                    }
-                        
-                        
-                        
                             .sheet(isPresented: $showingSheet) {
                                 FeelingSheet()
                             }
                     } .padding(90)
-                    
+
                 }
 
             Spacer()
@@ -115,48 +99,61 @@ struct ActivityTimerView: View {
             }
         }
     }
-    
+
     func pause() {
-        print(self.isPaused)
-        if self.isPaused == false {
-            self.isPaused = true
-        } else {
+        if self.isPaused {
             self.isPaused = false
             initTimer()
+            if isPlaying {
+                playMusic()
+            }
+        } else {
+            self.isPaused = true
+            stopMusic()
         }
-        print(self.isPaused)
     }
-    
+
     func initTimer() {
         if self.counter < self.countTo {
             self.counter += 1
         }
-
     }
-    
+
     func endTimer() {
         self.counter = self.countTo
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.isFinished = true
+            self.showingSheet.toggle()
         }
     }
-    
+
     func completed() -> Bool {
         return progress() == 1
     }
-    
+
     func progress() -> CGFloat {
         return CGFloat(counter) / CGFloat(countTo)
     }
-    
 
-    
+    func playMusic() {
+        guard let audioURL = audioURL else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer?.play()
+        } catch {
+            print("Failed to play music: \(error)")
+        }
+    }
+
+    func stopMusic() {
+        audioPlayer?.stop()
+        audioPlayer = nil
+    }
 }
 
 struct Clock: View {
     var counter: Int
     var countTo: Int
-    
+
     var body: some View {
         VStack {
             Text(counterToMinutes())
@@ -164,22 +161,19 @@ struct Clock: View {
                 .fontWeight(.regular)
         }
     }
-    
+
     func counterToMinutes() -> String {
         let currentTime = countTo - counter
         let seconds = currentTime % 60
         let minutes = Int(currentTime / 60)
-        
-        return "\(minutes):\(seconds < 10 ? "0": "")\(seconds)"
-        
-        
-    }
 
-    struct ActivityTimerView_Previews: PreviewProvider {
-        static var previews: some View {
-            ActivityTimerView(countTo: 0)
-        }
+        return "\(minutes):\(seconds < 10 ? "0": "")\(seconds)"
     }
 }
 
+struct ActivityTimerView_Previews: PreviewProvider {
+    static var previews: some View {
+        ActivityTimerView(countTo: 0)
+    }
+}
 
