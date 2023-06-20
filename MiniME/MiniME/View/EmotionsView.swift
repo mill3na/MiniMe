@@ -16,7 +16,7 @@ struct FeelingSheet: View {
     @State var triste = false
     @State var muitoFeliz = false
     @State var muitoTriste = false
-    @State var miniMe = "feliz"
+    @State var miniMe = "original"
     @AppStorage("username") var username: String = "feeling"
 
     var body: some View {
@@ -124,8 +124,9 @@ struct FeelingSheet: View {
                     }
                     
                 }
-                Button {
-                    dismiss()
+                //mudamos de botao e dismiss para navigation
+                NavigationLink {
+                    NovaAtividadeView()
                 } label: {
                     Text("Continuar")
 

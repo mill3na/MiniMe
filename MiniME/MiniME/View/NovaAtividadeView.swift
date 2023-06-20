@@ -58,7 +58,9 @@ struct NovaAtividadeView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden()
     }
+
 
 }
 
