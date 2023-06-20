@@ -14,7 +14,17 @@ struct ActivityTimerView: View {
     var countTo: Int
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
+    @State var isFinished = false
+
     var body: some View {
+        if isFinished {
+            FeelingSheet()
+        } else {
+            content
+        }
+    }
+
+    var content: some View {
         VStack {
             HStack {
                 Button {
@@ -83,9 +93,9 @@ struct ActivityTimerView: View {
                             .foregroundColor(.white)
                         Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
-                            .sheet(isPresented: $showingSheet) {
-                                FeelingSheet()
-                            }
+//                            .sheet(isPresented: $showingSheet) {
+//                                FeelingSheet()
+//                            }
                     } .padding(90)
 
                 }
@@ -122,7 +132,8 @@ struct ActivityTimerView: View {
     func endTimer() {
         self.counter = self.countTo
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.showingSheet.toggle()
+            self.isFinished = true
+//            self.showingSheet.toggle()
         }
     }
 
