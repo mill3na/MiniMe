@@ -98,7 +98,6 @@ struct listCloudKitItems: View {
 //                                .foregroundColor(Color.black)
                         }
                         .buttonStyle(.plain)
-                        
                         .padding(12)
                     }
                 }.onDelete(perform: deleteItem)
@@ -106,6 +105,7 @@ struct listCloudKitItems: View {
         } .onAppear {
             viewModel.populateTasks()
         }
+        .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {

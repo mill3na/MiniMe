@@ -21,126 +21,138 @@ struct FeelingSheet: View {
 
     var body: some View {
         NavigationStack{
-            VStack {
-                Image(miniMe)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 350, height: 350)
-                    .padding(.bottom, 100)
-                    .padding(.top, 100)
-                HStack(spacing: 70) {
+            ZStack{
+                Color("Background-Color")
+                    .ignoresSafeArea()
+                VStack {
 
-                    Button {
-                        triste.toggle()
-                        self.miniMe = "triste"
-
-                    } label: {
-                        Image(systemName: "face.smiling")
-                            .font(.system(size: 25))
-                            .foregroundColor(.black)
-                            .background {
-                                Rectangle()
-                                    .frame(width: 80, height: 60)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(12)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
-                                    .onChange(of: triste) { newValue in
-                                        if triste == true {
-                                            feliz = false
-                                            muitoFeliz = false
-                                            muitoTriste = false
-                                        }
-                                    }
-                            }
-                    }
-                    Button {
-                        feliz.toggle()
-                        self.miniMe = "supertriste"
-                    } label: {
-                        Image(systemName: "face.smiling")
-                            .font(.system(size: 25))
-                            .foregroundColor(.black)
-                            .background {
-                                Rectangle()
-                                    .frame(width: 80, height: 60)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(12)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
-                                    .onChange(of: feliz) { newValue in
-                                        if  feliz == true {
-                                            triste = false
-                                            muitoFeliz = false
-                                            muitoTriste = false
-                                        }
-                                    }
-                            }
-                    }
-                    Button {
-                        triste.toggle()
-                        self.miniMe = "feliz"
-                    } label: {
-                        Image(systemName: "face.smiling")
-                            .font(.system(size: 25))
-                            .foregroundColor(.black)
-                            .background {
-                                Rectangle()
-                                    .frame(width: 80, height: 60)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(12)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
-                                    .onChange(of: triste) { newValue in
-                                        if triste == true {
-                                            feliz = false
-                                            muitoFeliz = false
-                                            muitoTriste = false
-                                        }
-                                    }
-                            }
-                    }
-
-                    Button {
-                        muitoFeliz.toggle()
-                        self.miniMe = "superfeliz"
-                    } label: {
-                        Image(systemName: "face.smiling")
-                            .font(.system(size: 25))
-                            .foregroundColor(.black)
-                            .background {
-                                Rectangle()
-                                    .frame(width: 80, height: 60)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(12)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
-                                    .onChange(of: muitoFeliz) { newValue in
-                                        if muitoFeliz == true {
-                                            feliz = false
-                                            triste = false
-                                            muitoTriste = false
-                                        }
-                                    }
-                            }
-
-
-                    }
-                    
-                }
-                //mudamos de botao e dismiss para navigation
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Continuar")
-
+                    Text("Como estamos nos sentindo?")
                         .foregroundColor(.black)
-                        .background {
-                            Rectangle()
-                                .frame(width: 150, height: 60)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
+                        .font(Font.custom("MoreSugarThin", size: 40))
+
+                    Image(miniMe)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 350, height: 350)
+                        .padding(.bottom, 40)
+                    HStack(spacing: 70) {
+
+                        Button {
+                            triste.toggle()
+                            self.miniMe = "feliz"
+
+                        } label: {
+                            Text("🥰")
+                                .font(.system(size: 25))
+                                .foregroundColor(.black)
+                                .background {
+                                    Rectangle()
+                                        .frame(width: 80, height: 60)
+                                        .foregroundColor(Color("Button-Color"))
+                                        .cornerRadius(12)
+                                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+                                        .onChange(of: triste) { newValue in
+                                            if triste == true {
+                                                feliz = false
+                                                muitoFeliz = false
+                                                muitoTriste = false
+                                            }
+                                        }
+                                }
+                        }
+                        Button {
+                            feliz.toggle()
+                            self.miniMe = "superfeliz"
+                        } label: {
+                            Text("😁")
+                                .font(.system(size: 25))
+                                .foregroundColor(.black)
+                                .background {
+                                    Rectangle()
+                                        .frame(width: 80, height: 60)
+                                        .foregroundColor(Color("Button-Color"))
+                                        .foregroundColor(.white)
+                                        .cornerRadius(12)
+                                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+                                        .onChange(of: feliz) { newValue in
+                                            if  feliz == true {
+                                                triste = false
+                                                muitoFeliz = false
+                                                muitoTriste = false
+                                            }
+                                        }
+                                }
+                        }
+                        Button {
+                            triste.toggle()
+                            self.miniMe = "triste"
+                        } label: {
+                            Text("☹️")
+                                .font(.system(size: 25))
+                                .foregroundColor(.black)
+                                .background {
+                                    Rectangle()
+                                        .frame(width: 80, height: 60)
+                                        .foregroundColor(Color("Button-Color"))
+                                        .foregroundColor(.white)
+                                        .cornerRadius(12)
+                                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+                                        .onChange(of: triste) { newValue in
+                                            if triste == true {
+                                                feliz = false
+                                                muitoFeliz = false
+                                                muitoTriste = false
+                                            }
+                                        }
+                                }
                         }
 
+                        Button {
+                            muitoFeliz.toggle()
+                            self.miniMe = "supertriste"
+                        } label: {
+                            Text("😭")
+                                .font(.system(size: 25))
+                                .foregroundColor(.black)
+                                .background {
+                                    Rectangle()
+                                        .frame(width: 80, height: 60)
+                                        .foregroundColor(Color("Button-Color"))
+                                        .foregroundColor(.white)
+                                        .cornerRadius(12)
+                                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
+                                        .onChange(of: muitoFeliz) { newValue in
+                                            if muitoFeliz == true {
+                                                feliz = false
+                                                triste = false
+                                                muitoTriste = false
+                                            }
+                                        }
+                                }
+
+
+                        }
+
+                    }
+                    //mudamos de botao e dismiss para navigation
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Continuar")
+                            .foregroundColor(.white)
+
+                            .background {
+                                Rectangle()
+                                    .frame(width: 150, height: 60)
+                                    .foregroundColor(Color("Button-Color"))
+                                    .foregroundColor(.white)
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
+                            }
+
+                    }
+                    .padding(.top, 70)
                 }
-                .padding(.top, 100)
             }
         }
     }

@@ -90,7 +90,6 @@
 				F8369B5E2A3B5B660083991D /* EmotionsView.swift */,
 				49145CB32A408B1800CE1E44 /* OnboardingView.swift */,
 				6459E0C02A3B4E68002409D6 /* MinimeView.swift */,
-				6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */,
 				F8369B722A3B96F50083991D /* CloudKitPocView.swift */,
 			);
 			path = View;
@@ -171,6 +170,7 @@
 				0D90E8D12A39E201008FD186 /* TimerPickerView.swift */,
 				0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */,
 				0D90E8D92A3BE564008FD186 /* ToggleView.swift */,
+				6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */,
 				64BF188C2A3B45DA00C41AA7 /* Resources */,
 			);
 			path = Components;
