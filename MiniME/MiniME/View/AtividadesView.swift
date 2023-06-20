@@ -63,6 +63,21 @@ struct listCloudKitItems: View {
         return selectedColor.opacity(0.6)
     }
     
+    struct FormHiddenBackground: ViewModifier {
+        func body(content: Content) -> some View {
+            if #available(iOS 16.0, *) {
+                content.scrollContentBackground(.hidden)
+            } else {
+                content.onAppear {
+                    UITableView.appearance().backgroundColor = .clear
+                }
+                .onDisappear {
+                    UITableView.appearance().backgroundColor = .systemGroupedBackground
+                }
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             List {
@@ -73,35 +88,51 @@ struct listCloudKitItems: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 5, height: 70)
                             .foregroundColor(priorityColor(priority: item.priority))
-                        Image("miniMe-cortado2")
+                            
+                        Image("Icon-miniME")
                             .resizable()
-                            .frame(width: 60 , height: 70, alignment: .bottom)
+                            .frame(width: 60 , height: 60, alignment: .bottom)
                             .padding(12)
                         VStack (alignment: .leading){
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
                             Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
-//                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
-                                .font(.title3)
+
+                                .font(.none)
                                 .fontWeight(.regular)
                                 
-                        }
+                        } .padding(.bottom)
 
                         Spacer()
                         NavigationLink {
                             ActivityTimerView(countTo: item.minutesTime)
                             
                         } label: {
-//                            Image(systemName: "play.circle")
-//                                .font(.system(size: 25))
-//                                .foregroundColor(Color.black)
                         }
                         .buttonStyle(.plain)
+<<<<<<< Updated upstream
                         .padding(12)
+=======
+                        .padding(10)
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .padding(10)
+                    .background {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(.white)
+                            .shadow(radius: 2, x: 2, y: 2)
+>>>>>>> Stashed changes
                     }
                 }.onDelete(perform: deleteItem)
-            }
+                
+            } .navigationTitle("Minhas Atividade")
+            .foregroundColor(Color("Icon-Color"))
+            .modifier(FormHiddenBackground())
+            .background(Color("Background-Color"))
+            .listStyle(.plain)
+
         } .onAppear {
             viewModel.populateTasks()
         }

@@ -19,7 +19,7 @@ struct ToggleView: View {
             VStack(alignment: .leading){
                 Text(title)
                 Text(description)
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color("Icon-Color"))
                     .font(.system(size: 12))
             }
         }

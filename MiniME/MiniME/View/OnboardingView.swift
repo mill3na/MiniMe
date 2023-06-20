@@ -119,9 +119,9 @@ struct OnboardingView: View {
                                 .padding()
                                 .background(Color.accentColor)
                                 .accentColor(Color("Button-Color"))
-                                .cornerRadius(15)
+                                .cornerRadius(12)
                         }
-                        .padding()
+                        .padding(2)
                     }
                     
                     Spacer()
@@ -138,7 +138,7 @@ struct OnboardingView: View {
                             .padding()
                             .background(Color.accentColor)
                             .accentColor(Color("Button-Color"))
-                            .cornerRadius(15)
+                            .cornerRadius(12)
                         
                     }
                 } .padding()
@@ -149,6 +149,7 @@ struct OnboardingView: View {
         })
     }
 }
+
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
