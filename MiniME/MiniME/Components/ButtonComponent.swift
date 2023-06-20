@@ -11,7 +11,7 @@ struct pauseButtonComponent: View {
     @State var text: String
     let activity: () -> ()
     @State var isPaused: Bool = false
-    
+        
     var body: some View {
         Button {
             activity()
@@ -19,11 +19,11 @@ struct pauseButtonComponent: View {
         } label: {
             Text(isPaused ? "Retomar" : text)
             
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .background {
                     Rectangle()
                         .frame(width: 120, height: 60, alignment: .center)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Button-Color"))
                         .cornerRadius(12)
                         .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3) // << shadow to all composition
                 }
