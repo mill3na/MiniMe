@@ -111,9 +111,6 @@ struct listCloudKitItems: View {
                         } label: {
                         }
                         .buttonStyle(.plain)
-<<<<<<< Updated upstream
-                        .padding(12)
-=======
                         .padding(10)
                     }
                     .listRowBackground(Color.clear)
@@ -123,7 +120,6 @@ struct listCloudKitItems: View {
                         RoundedRectangle(cornerRadius: 16)
                             .fill(.white)
                             .shadow(radius: 2, x: 2, y: 2)
->>>>>>> Stashed changes
                     }
                 }.onDelete(perform: deleteItem)
                 
