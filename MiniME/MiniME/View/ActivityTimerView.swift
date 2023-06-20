@@ -14,11 +14,8 @@ struct ActivityTimerView: View {
     var countTo: Int
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
-<<<<<<< Updated upstream
     @State var isFinished = false
 
-=======
->>>>>>> Stashed changes
     var body: some View {
         if isFinished {
             FeelingSheet()
@@ -96,15 +93,9 @@ struct ActivityTimerView: View {
                             .foregroundColor(.white)
                         Spacer()
                         ButtonComponent(text: "Finalizar", activity: endTimer)
-<<<<<<< Updated upstream
-//                            .sheet(isPresented: $showingSheet) {
-//                                FeelingSheet()
-//                            }
-=======
                             .sheet(isPresented: $showingSheet) {
                                 FeelingSheet()
                             }
->>>>>>> Stashed changes
                     } .padding(90)
 
                 }
