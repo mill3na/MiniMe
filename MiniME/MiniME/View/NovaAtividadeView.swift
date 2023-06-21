@@ -12,11 +12,11 @@ struct NovaAtividadeView: View {
 
     var body: some View {
         VStack {
-            Image("minime")
+            Image("Icon-miniME")
+                .resizable()
                 .scaledToFit()
-                .frame(width: 300, height: 300)
-                .padding(.bottom, 100)
-                .padding(.top, 150)
+                .padding()
+                
             
             HStack{
                 Button {
@@ -53,7 +53,8 @@ struct NovaAtividadeView: View {
                 }
 
             }
-        }
+        } .frame(maxWidth: .infinity, alignment: .trailing)
+        .background(Color("Background-Color"))
     }
 
 }

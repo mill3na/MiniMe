@@ -24,64 +24,6 @@ struct AtividadesView: View {
 
     var body: some View {
         listCloudKitItems(viewModel: TaskViewModel(container: self.container))
-//        NavigationView {
-//
-//            ScrollView {
-//
-//                LazyVGrid(columns: columns) {
-//                    ForEach(atividades, id: \.self) { atividade in
-//                        Rectangle()
-//                            .frame(width: 400, height: 100)
-//                            .foregroundColor(Color(red: 235/255, green: 235/255, blue: 235/255))
-//                            .cornerRadius(10)
-//                            .shadow(color: Color.primary.opacity(0.3), radius: 1)
-//                            .overlay {
-//                                HStack{
-//                                    Image(atividade.imagem)
-//                                        .resizable()
-//                                        .frame(width: 70 , height: 70, alignment: .bottom)
-//                                        .clipShape(Circle())
-//                                        .padding(12)
-//
-//                                    VStack(alignment: .leading, spacing: 8) {
-//                                        Text(atividade.titulo)
-//                                            .font(.system(.title2, design: .rounded))
-//                                        Text("11:00 am - 12:00 am")
-//                                    }
-//
-//                                    Spacer()
-//
-//                                    Button {
-//                                        print("Button pressed")
-//                                    } label: {
-//                                        Image(systemName: "play.circle")
-//                                            .font(.system(size: 25))
-//                                            .foregroundColor(Color.black)
-//                                    }
-//                                    .padding(12)
-//                                }
-//                            }
-//                    }
-//                }
-//                Image("tarefas")
-//                    .resizable()
-//                    .frame(width: 200 , height: 220, alignment: .bottom)
-//                    .padding(.top, 150)
-//                    .padding(.trailing, 19)
-//            }
-//
-//            .navigationTitle("Minhas atividades")
-//            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                Button {
-//                    print("Button pressed")
-//                } label: {
-//                    Image(systemName: "plus.circle")
-//                        .foregroundColor(Color.black)
-//                }
-//
-//            }
-//        }
     }
 
     struct AtividadesView_Previews: PreviewProvider {
@@ -121,6 +63,21 @@ struct listCloudKitItems: View {
         return selectedColor.opacity(0.6)
     }
     
+    struct FormHiddenBackground: ViewModifier {
+        func body(content: Content) -> some View {
+            if #available(iOS 16.0, *) {
+                content.scrollContentBackground(.hidden)
+            } else {
+                content.onAppear {
+                    UITableView.appearance().backgroundColor = .clear
+                }
+                .onDisappear {
+                    UITableView.appearance().backgroundColor = .systemGroupedBackground
+                }
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             List {
@@ -131,38 +88,62 @@ struct listCloudKitItems: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 5, height: 70)
                             .foregroundColor(priorityColor(priority: item.priority))
-                        Image("miniMe-cortado2")
+                            
+                        Image("Icon-miniME")
                             .resizable()
-                            .frame(width: 60 , height: 70, alignment: .bottom)
+                            .frame(width: 60 , height: 60, alignment: .bottom)
                             .padding(12)
                         VStack (alignment: .leading){
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
                             Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
-//                            Text("\(viewModel.calculateTotalMinutes(hours: 0, minutes: item.minutesTime, seconds: 0)) min")
-                                .font(.title3)
+
+                                .font(.none)
                                 .fontWeight(.regular)
                                 
-                        }
+                        } .padding(.bottom)
 
                         Spacer()
                         NavigationLink {
                             ActivityTimerView(countTo: item.minutesTime)
                             
                         } label: {
-//                            Image(systemName: "play.circle")
-//                                .font(.system(size: 25))
-//                                .foregroundColor(Color.black)
                         }
                         .buttonStyle(.plain)
-                        
-                        .padding(12)
+                        .padding(10)
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .padding(10)
+                    .background {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(.white)
+                            .shadow(radius: 2, x: 2, y: 2)
                     }
                 }.onDelete(perform: deleteItem)
-            }
+                
+            } .navigationTitle("Minhas Atividade")
+            .foregroundColor(Color("Icon-Color"))
+            .modifier(FormHiddenBackground())
+            .background(Color("Background-Color"))
+            .listStyle(.plain)
+
         } .onAppear {
             viewModel.populateTasks()
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    NovAtividade(viewModel: self.viewModel)
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .padding()
+                }
+            }
         }
     }
 }
