@@ -7,26 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */; };
-		F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A502A37574E00F61AA9 /* Persistence.swift */; };
+		0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D12A39E201008FD186 /* TimerPickerView.swift */; };
+		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
+		0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */; };
+		0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D92A3BE564008FD186 /* ToggleView.swift */; };
+		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
+		4C4FDF162A408E1500F39651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentView.swift */; };
+		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
+		4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */; };
+		4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
+		4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */; };
+		4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */; };
+		49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49145CB32A408B1800CE1E44 /* OnboardingView.swift */; };
+		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
+		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
+		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
+		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
+		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
+		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
+		F8369B5A2A3B5AFB0083991D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8369B592A3B5AFB0083991D /* Assets.xcassets */; };
+		F8369B602A3B5B660083991D /* AdicionarAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B5B2A3B5B660083991D /* AdicionarAtividadeView.swift */; };
+		F8369B622A3B5B660083991D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B5D2A3B5B660083991D /* ContentView.swift */; };
+		F8369B632A3B5B660083991D /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B5E2A3B5B660083991D /* EmotionsView.swift */; };
+		F8369B642A3B5B660083991D /* ActivityTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B5F2A3B5B660083991D /* ActivityTimerView.swift */; };
+		F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B652A3B5B840083991D /* MiniMEApp.swift */; };
+		F8369B682A3B5B900083991D /* AtividadesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B672A3B5B900083991D /* AtividadesModel.swift */; };
+		F8369B6A2A3B5B9E0083991D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B692A3B5B9E0083991D /* Persistence.swift */; };
+		F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */; };
+		F8369B712A3B96B90083991D /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */; };
+		F8369B732A3B96F50083991D /* CloudKitPocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B722A3B96F50083991D /* CloudKitPocView.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
-		F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A552A37574E00F61AA9 /* ContentView.swift */; };
-		F8413A582A37574F00F61AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A572A37574F00F61AA9 /* Assets.xcassets */; };
-		F8413A5C2A37574F00F61AA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */; };
+		F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A692A379CA300F61AA9 /* ButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4C4FDF1C2A408E1500F39651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8413A432A37574E00F61AA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C4FDF102A408E1500F39651;
+			remoteInfo = "MiniMeWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C4FDF1F2A408E1500F39651 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPropriedadeView.swift; sourceTree = "<group>"; };
+		0D90E8D92A3BE564008FD186 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMeWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMeWatchApp.swift; sourceTree = "<group>"; };
+		4C4FDF152A408E1500F39651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C4FDF172A408E1500F39651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerWatch.swift; sourceTree = "<group>"; };
+		4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
+		49145CB32A408B1800CE1E44 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoreSugarThin-rgEwB.otf"; sourceTree = "<group>"; };
+		49145CB72A4091F000CE1E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49B61F1A2A41144B00802FA3 /* AtividadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
+		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
+		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
+		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8369B592A3B5AFB0083991D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8369B5B2A3B5B660083991D /* AdicionarAtividadeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarAtividadeView.swift; sourceTree = "<group>"; };
+		F8369B5D2A3B5B660083991D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8369B5E2A3B5B660083991D /* EmotionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
+		F8369B5F2A3B5B660083991D /* ActivityTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTimerView.swift; sourceTree = "<group>"; };
+		F8369B652A3B5B840083991D /* MiniMEApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
+		F8369B672A3B5B900083991D /* AtividadesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesModel.swift; sourceTree = "<group>"; };
+		F8369B692A3B5B9E0083991D /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTaskViewModel.swift; sourceTree = "<group>"; };
+		F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitTaskModel.swift; sourceTree = "<group>"; };
+		F8369B722A3B96F50083991D /* CloudKitPocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPocView.swift; sourceTree = "<group>"; };
 		F8413A4B2A37574E00F61AA9 /* MiniME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMEApp.swift; sourceTree = "<group>"; };
-		F8413A502A37574E00F61AA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F8413A532A37574E00F61AA9 /* MiniME.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniME.xcdatamodel; sourceTree = "<group>"; };
-		F8413A552A37574E00F61AA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F8413A572A37574F00F61AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8413A592A37574F00F61AA9 /* MiniME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniME.entitlements; sourceTree = "<group>"; };
-		F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8413A692A379CA300F61AA9 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C4FDF0E2A408E1500F39651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8413A482A37574E00F61AA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +121,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4FDF122A408E1500F39651 /* MiniMeWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */,
+				4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */,
+				4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */,
+				4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */,
+				4C4FDF152A408E1500F39651 /* ContentView.swift */,
+				4C4FDF172A408E1500F39651 /* Assets.xcassets */,
+				4C4FDF192A408E1500F39651 /* Preview Content */,
+			);
+			path = "MiniMeWatch Watch App";
+			sourceTree = "<group>";
+		};
+		4C4FDF192A408E1500F39651 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6459E0C52A3C816F002409D6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64BF18882A3B3C6500C41AA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8369B5F2A3B5B660083991D /* ActivityTimerView.swift */,
+				49B61F1A2A41144B00802FA3 /* AtividadesView.swift */,
+				F8369B5B2A3B5B660083991D /* AdicionarAtividadeView.swift */,
+				F8369B5D2A3B5B660083991D /* ContentView.swift */,
+				F8369B5E2A3B5B660083991D /* EmotionsView.swift */,
+				49145CB32A408B1800CE1E44 /* OnboardingView.swift */,
+				6459E0C02A3B4E68002409D6 /* MinimeView.swift */,
+				F8369B722A3B96F50083991D /* CloudKitPocView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64BF18892A3B3CC600C41AA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8369B672A3B5B900083991D /* AtividadesModel.swift */,
+				F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64BF188A2A3B3D0400C41AA7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8369B692A3B5B9E0083991D /* Persistence.swift */,
+				0D90E8D32A39E255008FD186 /* TimerViewModel.swift */,
+				F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		64BF188B2A3B45C100C41AA7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F8369B652A3B5B840083991D /* MiniMEApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		64BF188C2A3B45DA00C41AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49E5AED92A40A2050070CCD0 /* song.mp3 */,
+				49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */,
+				F8369B592A3B5AFB0083991D /* Assets.xcassets */,
+				6459E0C52A3C816F002409D6 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F8413A422A37574E00F61AA9 = {
 			isa = PBXGroup;
 			children = (
 				F8413A4D2A37574E00F61AA9 /* MiniME */,
+				4C4FDF122A408E1500F39651 /* MiniMeWatch Watch App */,
 				F8413A4C2A37574E00F61AA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F8413A4B2A37574E00F61AA9 /* MiniME.app */,
+				4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,28 +225,51 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
-				F8413A4E2A37574E00F61AA9 /* MiniMEApp.swift */,
-				F8413A502A37574E00F61AA9 /* Persistence.swift */,
-				F8413A552A37574E00F61AA9 /* ContentView.swift */,
-				F8413A572A37574F00F61AA9 /* Assets.xcassets */,
+				49145CB72A4091F000CE1E44 /* Info.plist */,
+				64BF188B2A3B45C100C41AA7 /* Application */,
+				64BF188A2A3B3D0400C41AA7 /* ViewModel */,
+				64BF18892A3B3CC600C41AA7 /* Model */,
+				64BF18882A3B3C6500C41AA7 /* View */,
+				F8413A682A379C9300F61AA9 /* Components */,
 				F8413A592A37574F00F61AA9 /* MiniME.entitlements */,
 				F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */,
-				F8413A5A2A37574F00F61AA9 /* Preview Content */,
 			);
 			path = MiniME;
 			sourceTree = "<group>";
 		};
-		F8413A5A2A37574F00F61AA9 /* Preview Content */ = {
+		F8413A682A379C9300F61AA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F8413A5B2A37574F00F61AA9 /* Preview Assets.xcassets */,
+				F8413A692A379CA300F61AA9 /* ButtonComponent.swift */,
+				0D90E8D12A39E201008FD186 /* TimerPickerView.swift */,
+				0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */,
+				0D90E8D92A3BE564008FD186 /* ToggleView.swift */,
+				6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */,
+				64BF188C2A3B45DA00C41AA7 /* Resources */,
 			);
-			path = "Preview Content";
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C4FDF222A408E1500F39651 /* Build configuration list for PBXNativeTarget "MiniMeWatch Watch App" */;
+			buildPhases = (
+				4C4FDF0D2A408E1500F39651 /* Sources */,
+				4C4FDF0E2A408E1500F39651 /* Frameworks */,
+				4C4FDF0F2A408E1500F39651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MiniMeWatch Watch App";
+			productName = "MiniMeWatch Watch App";
+			productReference = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8413A4A2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8413A5F2A37574F00F61AA9 /* Build configuration list for PBXNativeTarget "MiniME" */;
@@ -85,10 +277,12 @@
 				F8413A472A37574E00F61AA9 /* Sources */,
 				F8413A482A37574E00F61AA9 /* Frameworks */,
 				F8413A492A37574E00F61AA9 /* Resources */,
+				4C4FDF1F2A408E1500F39651 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C4FDF1D2A408E1500F39651 /* PBXTargetDependency */,
 			);
 			name = MiniME;
 			productName = MiniME;
@@ -105,6 +299,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					4C4FDF102A408E1500F39651 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					F8413A4A2A37574E00F61AA9 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -124,37 +321,146 @@
 			projectRoot = "";
 			targets = (
 				F8413A4A2A37574E00F61AA9 /* MiniME */,
+				4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C4FDF0F2A408E1500F39651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */,
+				4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8413A492A37574E00F61AA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8413A5C2A37574F00F61AA9 /* Preview Assets.xcassets in Resources */,
-				F8413A582A37574F00F61AA9 /* Assets.xcassets in Resources */,
+				6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */,
+				49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */,
+				49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */,
+				F8369B5A2A3B5AFB0083991D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C4FDF0D2A408E1500F39651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4FDF162A408E1500F39651 /* ContentView.swift in Sources */,
+				4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */,
+				4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */,
+				4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */,
+				4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8413A472A37574E00F61AA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8413A4F2A37574E00F61AA9 /* MiniMEApp.swift in Sources */,
-				F8413A512A37574E00F61AA9 /* Persistence.swift in Sources */,
-				F8413A562A37574E00F61AA9 /* ContentView.swift in Sources */,
+				49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */,
+				0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */,
+				0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */,
+				F8369B642A3B5B660083991D /* ActivityTimerView.swift in Sources */,
+				6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */,
+				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
+				F8369B712A3B96B90083991D /* CloudKitTaskModel.swift in Sources */,
+				F8369B602A3B5B660083991D /* AdicionarAtividadeView.swift in Sources */,
+				F8369B622A3B5B660083991D /* ContentView.swift in Sources */,
+				0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */,
+				F8369B6A2A3B5B9E0083991D /* Persistence.swift in Sources */,
+				F8369B632A3B5B660083991D /* EmotionsView.swift in Sources */,
+				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
+				49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */,
+				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
+				F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */,
+				F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */,
+				F8369B682A3B5B900083991D /* AtividadesModel.swift in Sources */,
+				F8369B732A3B96F50083991D /* CloudKitPocView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4C4FDF1D2A408E1500F39651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */;
+			targetProxy = 4C4FDF1C2A408E1500F39651 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4C4FDF202A408E1500F39651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 88KH7Y2P56;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMeWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada.maia.MiniME;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		4C4FDF212A408E1500F39651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 88KH7Y2P56;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniMeWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada.maia.MiniME;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 		F8413A5D2A37574F00F61AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -267,16 +573,18 @@
 		F8413A602A37574F00F61AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniME/MiniME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MiniME/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 88KH7Y2P56;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiniME/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -287,7 +595,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -295,7 +603,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,16 +615,18 @@
 		F8413A612A37574F00F61AA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniME/MiniME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MiniME/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 88KH7Y2P56;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiniME/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,7 +637,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
@@ -333,7 +645,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,6 +657,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C4FDF222A408E1500F39651 /* Build configuration list for PBXNativeTarget "MiniMeWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4FDF202A408E1500F39651 /* Debug */,
+				4C4FDF212A408E1500F39651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8413A462A37574E00F61AA9 /* Build configuration list for PBXProject "MiniME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
