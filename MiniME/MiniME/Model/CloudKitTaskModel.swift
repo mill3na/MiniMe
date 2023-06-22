@@ -15,18 +15,20 @@ struct Task {
 //    let hourTime: Int
     let mode: String
     let priority: String
+    var startTime: Date?
     
-    init(title: String, priority: String, mode: String, minutesTime: Int, id: CKRecord.ID? = nil) {
+    init(title: String, priority: String, mode: String, minutesTime: Int, startTime: Date? = nil, id: CKRecord.ID? = nil) {
         self.title = title
         self.id = id
         self.minutesTime = minutesTime
+        self.startTime = startTime
 //        self.hourTime = hourTime
         self.mode = mode
         self.priority = priority
     }
     
     func toDictionary() -> [String: Any]{
-        return ["title": title, "priority": priority, "mode": mode, "minutesTime": minutesTime]
+        return ["title": title, "priority": priority, "mode": mode, "minutesTime": minutesTime, "startTime" : startTime ]
     }
     
     static func fromRecord(_ record: CKRecord) -> Task? {
@@ -34,6 +36,7 @@ struct Task {
         guard let title = record.value(forKey: "title") as? String, let priority = record.value(forKey: "priority") as? String, let mode = record.value(forKey: "mode") as? String, let minutesTime = record.value(forKey: "minutesTime") as? Int else {
             return nil
         }
-        return Task(title: title, priority: priority, mode: mode, minutesTime: minutesTime, id: record.recordID)
+        let startTime = record.value(forKey: "startTime") as? Date
+        return Task(title: title, priority: priority, mode: mode, minutesTime: minutesTime, startTime: startTime, id: record.recordID)
     }
 }
