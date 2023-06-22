@@ -9,16 +9,6 @@ import SwiftUI
 import CloudKit
 
 struct AtividadesView: View {
-
-    let columns = [
-        GridItem(.flexible()),
-    ]
-
-    let atividades: [ActivityModel] = [ActivityModel(titulo: "Yoga", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Skin Care", imagem: "mini", hora: "12:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Leitura", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Comer", imagem: "mini", hora: "11:00", inicio: "mini"),
-    ]
     
     let container = CKContainer(identifier: "iCloud.miniMe")
 

@@ -15,7 +15,9 @@ struct ActivityTimerView: View {
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
     @State var isFinished = false
-
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @State var mineMeName: String = "MineMe"
+    
     var body: some View {
         if isFinished {
             FeelingSheet()
@@ -84,7 +86,7 @@ struct ActivityTimerView: View {
                 .padding()
 
                 VStack {
-                    Text("MiniMe")
+                    Text("\(mineMeName)")
                         .foregroundColor(.black)
                         .padding()
                         .font(Font.custom("MoreSugarThin", size: 30))
@@ -106,6 +108,12 @@ struct ActivityTimerView: View {
         .onReceive(timer) { time in
             if isPaused == false {
                 initTimer()
+            }
+        }
+        .onAppear {
+            var mineMeFetch = fetchMineMe(context: managedObjectContext)
+            if let mineMeName = mineMeFetch[0].name {
+                self.mineMeName = mineMeName
             }
         }
     }

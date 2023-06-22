@@ -19,7 +19,7 @@ struct MiniMEApp: App {
             let container = CKContainer(identifier: "iCloud.miniMe")
             OnboardingView()
 //            NovAtividade(viewModel: TaskViewModel(container: container))
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
