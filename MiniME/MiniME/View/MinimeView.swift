@@ -56,8 +56,7 @@ struct MinimeView: View {
             
         }
         .onAppear {
-            let mineMeFetch = fetchMineMe(context: managedObjectContext)
-            if let mineMeName = mineMeFetch[0].name {
+            if let mineMeName = fetchMineMe(context: managedObjectContext)?.name {
                 self.mineMeName = mineMeName
             }
         }

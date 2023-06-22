@@ -8,14 +8,14 @@
 import Foundation
 import CoreData
 
-func fetchMineMe(context: NSManagedObjectContext) -> [MineMe]  {
+func fetchMineMe(context: NSManagedObjectContext) -> MineMe? {
     do {
         let mineMeRequest = MineMe.fetchRequest() as NSFetchRequest<MineMe>
-        return try context.fetch(mineMeRequest)
+        return try context.fetch(mineMeRequest).first
     } catch {
         print("Error while fetching MineMe.")
         print(error)
-        return []
+        return nil
     }
 }
 
@@ -48,8 +48,8 @@ func filterById(id: UUID, context: NSManagedObjectContext) -> MineMe? {
     return miniMe
 }
 
-func updateMiniMe(id: UUID, emotion: String, context: NSManagedObjectContext) {
-    let miniMe = filterById(id: id, context: context)
+func updateMiniMe(emotion: String, context: NSManagedObjectContext) {
+    let miniMe = fetchMineMe(context: context)
     if let mineMeToUpdate = miniMe {
         mineMeToUpdate.emotion = emotion
         do {
@@ -81,11 +81,8 @@ func deleteMineMe(id: UUID, context: NSManagedObjectContext) {
 }
 
 func printSavedMiniMes (context: NSManagedObjectContext) {
-    var mineMes = fetchMineMe(context: context)
-    if !mineMes.isEmpty {
-        for mineMe in mineMes {
-            print("✨COREDATA DATA id: \(mineMe.id), name: \(mineMe.name), emotion: \(mineMe.emotion).")
-        }
+    if let mineMe = fetchMineMe(context: context) {
+        print("✨COREDATA DATA id: \(mineMe.id), name: \(mineMe.name), emotion: \(mineMe.emotion).")
     } else {
         print("There is no miniMes saved at the core data.")
     }
