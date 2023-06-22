@@ -11,6 +11,10 @@
 		0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D32A39E255008FD186 /* TimerViewModel.swift */; };
 		0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */; };
 		0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D90E8D92A3BE564008FD186 /* ToggleView.swift */; };
+		49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49145CB32A408B1800CE1E44 /* OnboardingView.swift */; };
+		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
+		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
+		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
 		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
 		4C4FDF162A408E1500F39651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentView.swift */; };
 		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
@@ -19,10 +23,6 @@
 		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
 		4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */; };
 		4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */; };
-		49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49145CB32A408B1800CE1E44 /* OnboardingView.swift */; };
-		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
-		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
-		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -70,6 +70,11 @@
 		0D90E8D32A39E255008FD186 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		0D90E8D52A39E28E008FD186 /* PickerPropriedadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPropriedadeView.swift; sourceTree = "<group>"; };
 		0D90E8D92A3BE564008FD186 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		49145CB32A408B1800CE1E44 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoreSugarThin-rgEwB.otf"; sourceTree = "<group>"; };
+		49145CB72A4091F000CE1E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49B61F1A2A41144B00802FA3 /* AtividadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
+		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMeWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMeWatchApp.swift; sourceTree = "<group>"; };
 		4C4FDF152A408E1500F39651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,11 +83,6 @@
 		4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerWatch.swift; sourceTree = "<group>"; };
 		4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
-		49145CB32A408B1800CE1E44 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MoreSugarThin-rgEwB.otf"; sourceTree = "<group>"; };
-		49145CB72A4091F000CE1E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		49B61F1A2A41144B00802FA3 /* AtividadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
-		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
