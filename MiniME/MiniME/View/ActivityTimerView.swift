@@ -1,5 +1,6 @@
 import SwiftUI
 import AVFoundation
+import CloudKit
 
 let timer = Timer
     .publish(every: 1, on: .main, in: .common)
@@ -11,6 +12,8 @@ struct ActivityTimerView: View {
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
     @State private var audioPlayer: AVAudioPlayer?
+    let container = CKContainer(identifier: "iCloud.miniMe")
+    var currentTask: TaskListViewModel
     var countTo: Int
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
@@ -106,7 +109,11 @@ struct ActivityTimerView: View {
         .onReceive(timer) { time in
             if isPaused == false {
                 initTimer()
+                
             }
+        }
+        .onAppear {
+            TaskViewModel(container: container).saveTask(title: currentTask.title, priority: currentTask.priority, mode: currentTask.mode, minutesTime: currentTask.minutesTime, startTime: currentTask.startTime)
         }
     }
 
@@ -182,9 +189,9 @@ struct Clock: View {
     }
 }
 
-struct ActivityTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityTimerView(countTo: 0)
-    }
-}
+//struct ActivityTimerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActivityTimerView(countTo: 0)
+//    }
+//}
 

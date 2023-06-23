@@ -25,6 +25,7 @@ struct Task {
 //        self.hourTime = hourTime
         self.mode = mode
         self.priority = priority
+        self.startTime = startTime
     }
     
     func toDictionary() -> [String: Any]{

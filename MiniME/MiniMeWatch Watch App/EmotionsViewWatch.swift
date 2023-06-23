@@ -14,7 +14,7 @@ struct FeelingSheet: View {
     @State var triste = false
     @State var muitoFeliz = false
     @State var muitoTriste = false
-    @State var miniMe = "MiniMe"
+    @State var miniMe = "Icon-miniME"
 
     var body: some View {
         VStack(spacing: 10) {

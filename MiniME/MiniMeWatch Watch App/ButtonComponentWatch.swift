@@ -51,8 +51,3 @@ struct ButtonComponent: View {
         .buttonStyle(.borderless)
     }
 }
-//struct ButtonComponent_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ButtonComponent(text: "retornar", activity: () -> ())
-//    }
-//}

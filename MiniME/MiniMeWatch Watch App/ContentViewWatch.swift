@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        ActivityTimerWatch(countTo: 5)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
+//struct ContentView: View {
+//    var body: some View {
+//        ActivityTimerWatch(countTo: 5)
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+//

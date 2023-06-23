@@ -16,8 +16,18 @@ struct ActivityTimerWatch: View {
     @State var isPaused: Bool = false
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
+    
     var countTo: Int // change this parameter when calling the view. This is the time in minutes.
     
+    init(startTime: Date, countTo totalSeconds: Int) {
+        self.countTo = totalSeconds
+        
+        // calcula tempo que ja passou
+        let doubleTotalSeconds = Double(totalSeconds)
+        let elapsedSeconds = Date.now.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate
+        let progress = 1 - (doubleTotalSeconds - elapsedSeconds)/doubleTotalSeconds // porcentagem do tempo que ja passou
+        self.counter =  Int(progress * doubleTotalSeconds)
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -46,9 +56,9 @@ struct ActivityTimerWatch: View {
                     )
                 
                 VStack (spacing: 0) {
-                    Image("MiniMe")
+                    Image("Icon-miniME")
                         .resizable()
-                        .frame(width: 55, height: 55)
+                        .frame(width: 65, height: 65)
                     Clock(counter: counter, countTo: countTo)
                     
                 }
@@ -132,10 +142,10 @@ struct Clock: View {
         
     }
     
-    struct ActivityTimerView_Previews: PreviewProvider {
-        static var previews: some View {
-            ActivityTimerWatch(countTo: 0)
-        }
-    }
+//    struct ActivityTimerView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            ActivityTimerWatch(countTo: 0)
+//        }
+//    }
 }
 

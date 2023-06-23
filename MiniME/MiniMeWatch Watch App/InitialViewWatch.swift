@@ -19,18 +19,17 @@ struct InitialView: View {
         Group {
             if let taskInProgress {
 //                ActivityTimerWatch(totalDeSegundosDaTask: Int, segundosQuePassaram: Int)
-                ActivityTimerWatch(countTo: secondsToComplete(for: taskInProgress))
+                ActivityTimerWatch(startTime: taskInProgress.startTime!, countTo: secondsToComplete(for: taskInProgress))
             } else {
                 VStack {
-                    Image("MiniMe")
+                    Image("Icon-miniME")
                         .resizable()
                         .imageScale(.large)
                         .frame(width: 80.0, height: 80.0)
                     Text("Nenhuma atividade em andamento")
                         .padding()
                         .foregroundColor(.white)
-                        .background(.blue)
-                        .cornerRadius(10)
+                        .cornerRadius(5)
                 }
             }
         }
@@ -40,14 +39,16 @@ struct InitialView: View {
                 let allTasks = viewModel.items
                 
                 print("todas as tasks: ", allTasks.count)
-                
-                let taskInProgress = allTasks.first(where: { $0.task.startTime != nil })
+
+                let taskInProgress = allTasks
+                    .filter { $0.startTime != nil }
+                    .sorted { vm1, vm2 in vm1.startTime! < vm2.startTime! } // mudar se nao funcionar kk
+                    .first
                 
                 print("nome:", taskInProgress?.task.title)
                 print("start:", taskInProgress?.task.startTime?.formatted())
                 print("duracao:", taskInProgress?.task.minutesTime)
 
-                
                 // start time = 10:50
                 // duracao = 10 minutos
                 // agora = 10:55
@@ -56,15 +57,6 @@ struct InitialView: View {
                                 
             }
         }
-    }
-    
-    func progress(for task: Task) -> Double {
-        
-        let elapsedSeconds = Date.now.timeIntervalSinceReferenceDate - task.startTime!.timeIntervalSinceReferenceDate
-        let totalSeconds = Double(task.minutesTime)
-        
-        return 1 - (totalSeconds - elapsedSeconds)/totalSeconds
-        
     }
     
     func secondsToComplete(for task: Task) -> Int {

@@ -15,9 +15,9 @@
 		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
 		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
 		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
+		4C2B12BF2A45C198002B0FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8369B592A3B5AFB0083991D /* Assets.xcassets */; };
 		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
 		4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */; };
-		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
 		4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */; };
 		4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
@@ -338,8 +338,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2B12BF2A45C198002B0FF1 /* Assets.xcassets in Resources */,
 				4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */,
-				4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

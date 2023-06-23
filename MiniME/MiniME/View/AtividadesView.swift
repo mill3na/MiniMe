@@ -78,49 +78,49 @@ struct listCloudKitItems: View {
         }
     }
     
+    func card(for item: TaskListViewModel) -> some View {
+        HStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 5, height: 70)
+                .foregroundColor(priorityColor(priority: item.priority))
+                
+            Image("Icon-miniME")
+                .resizable()
+                .frame(width: 60 , height: 60, alignment: .bottom)
+                .padding(12)
+            VStack (alignment: .leading){
+                Text("\(item.title)")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
+                    .font(.none)
+                    .fontWeight(.regular)
+                    
+            } .padding(.bottom)
+
+            Spacer()
+            NavigationLink {
+                ActivityTimerView(currentTask: item, countTo: item.minutesTime)
+            } label: {
+            }
+            .buttonStyle(.plain)
+            .padding(10)
+        }
+        .listRowBackground(Color.clear)
+        .listRowSeparator(.hidden)
+        .padding(10)
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(.white)
+                .shadow(radius: 2, x: 2, y: 2)
+        }
+    }
+    
     var body: some View {
         VStack {
             List {
                 ForEach(viewModel.items, id: \.recordId) { item in
-                    
-                    HStack {
-                        
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 5, height: 70)
-                            .foregroundColor(priorityColor(priority: item.priority))
-                            
-                        Image("Icon-miniME")
-                            .resizable()
-                            .frame(width: 60 , height: 60, alignment: .bottom)
-                            .padding(12)
-                        VStack (alignment: .leading){
-                            Text("\(item.title)")
-                                .font(.title2)
-                                .fontWeight(.medium)
-                            Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
-
-                                .font(.none)
-                                .fontWeight(.regular)
-                                
-                        } .padding(.bottom)
-
-                        Spacer()
-                        NavigationLink {
-                            ActivityTimerView(countTo: item.minutesTime)
-                            
-                        } label: {
-                        }
-                        .buttonStyle(.plain)
-                        .padding(10)
-                    }
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
-                    .padding(10)
-                    .background {
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(.white)
-                            .shadow(radius: 2, x: 2, y: 2)
-                    }
+                    card(for: item)
                 }.onDelete(perform: deleteItem)
                 
             } .navigationTitle("Minhas Atividade")
