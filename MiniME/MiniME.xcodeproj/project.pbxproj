@@ -21,8 +21,6 @@
 		4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */; };
 		4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
-		4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */; };
-		4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */; };
 		4C4FDF2D2A40979C00F39651 /* ButtonComponentWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */; };
 		4C4FDF2F2A4099BF00F39651 /* EmotionsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */; };
 		4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */; };
@@ -82,12 +80,14 @@
 		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMeWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMeWatchApp.swift; sourceTree = "<group>"; };
-		4C4FDF152A408E1500F39651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewWatch.swift; sourceTree = "<group>"; };
 		4C4FDF172A408E1500F39651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerWatch.swift; sourceTree = "<group>"; };
-		4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
-		4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsView.swift; sourceTree = "<group>"; };
+		4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponentWatch.swift; sourceTree = "<group>"; };
+		4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewWatch.swift; sourceTree = "<group>"; };
+		4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewWatch.swift; sourceTree = "<group>"; };
+		4CFE34212A4331C900F8E1F8 /* MiniMeWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniMeWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
