@@ -14,11 +14,12 @@ struct FeelingSheet: View {
     @State var triste = false
     @State var muitoFeliz = false
     @State var muitoTriste = false
-    
+    @State var miniMe = "MiniMe"
+
     var body: some View {
         VStack(spacing: 10) {
             
-            Image("MiniMe")
+            Image(miniMe)
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)            
             buttons
@@ -43,8 +44,9 @@ struct FeelingSheet: View {
     var buttons: some View {
         HStack(spacing: 5) {
             Button {
-                feliz.toggle()
-                //                activity()
+                muitoFeliz.toggle()
+                self.miniMe = "superfeliz"
+                
             } label: {
                 Text("🥰")
                     .font(.system(size: 15))
@@ -53,8 +55,30 @@ struct FeelingSheet: View {
                         Rectangle()
                             .foregroundColor(.white)
                             .cornerRadius(10)
+                            .onChange(of: muitoFeliz) { newValue in
+                               if muitoFeliz == true {
+                                    feliz = false
+                                    triste = false
+                                    muitoTriste = false
+                                }
+                            }
+                    }
+            }
+            
+            Button {
+                feliz.toggle()
+                self.miniMe = "feliz"
+            } label: {
+                Text("😁")
+                    .font(.system(size: 15))
+                    .foregroundColor(.black)
+                    .frame(width: 40, height: 30)
+                    .background {
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                             .onChange(of: feliz) { newValue in
-                                if  feliz == true {
+                                if feliz == true {
                                     triste = false
                                     muitoFeliz = false
                                     muitoTriste = false
@@ -65,8 +89,9 @@ struct FeelingSheet: View {
             
             Button {
                 triste.toggle()
+                self.miniMe = "triste"
             } label: {
-                Text("🙂")
+                Text("☹️")
                     .font(.system(size: 15))
                     .foregroundColor(.black)
                     .frame(width: 40, height: 30)
@@ -80,27 +105,6 @@ struct FeelingSheet: View {
                                     muitoFeliz = false
                                     muitoTriste = false
                                 }
-                            }
-                    }
-            }
-            
-            Button {
-                muitoFeliz.toggle()
-            } label: {
-                Text("☹️")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                    .frame(width: 40, height: 30)
-                    .background {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .onChange(of: muitoFeliz) { newValue in
-                                if muitoFeliz == true {
-                                    feliz = false
-                                    triste = false
-                                    muitoTriste = false
-                                }
                                 
                             }
                     }
@@ -108,6 +112,8 @@ struct FeelingSheet: View {
             
             Button {
                 muitoTriste.toggle()
+                muitoFeliz.toggle()
+                self.miniMe = "supertriste"
             } label: {
                 Text("😭")
                     .font(.system(size: 15))

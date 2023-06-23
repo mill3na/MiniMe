@@ -16,13 +16,18 @@
 		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
 		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
 		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
-		4C4FDF162A408E1500F39651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentView.swift */; };
+		4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */; };
 		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
 		4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */; };
 		4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
 		4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */; };
 		4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */; };
+		4C4FDF2D2A40979C00F39651 /* ButtonComponentWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */; };
+		4C4FDF2F2A4099BF00F39651 /* EmotionsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */; };
+		4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */; };
+		4CFE34222A4334D800F8E1F8 /* CloudKitTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */; };
+		4CFE34232A4334E800F8E1F8 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */; };
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -124,11 +129,13 @@
 		4C4FDF122A408E1500F39651 /* MiniMeWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				4C4FDF2E2A4099BF00F39651 /* EmotionsView.swift */,
-				4C4FDF2C2A40979C00F39651 /* ButtonComponent.swift */,
+				4CFE34212A4331C900F8E1F8 /* MiniMeWatch Watch App.entitlements */,
+				4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */,
+				4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */,
 				4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */,
 				4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */,
-				4C4FDF152A408E1500F39651 /* ContentView.swift */,
+				4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */,
+				4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */,
 				4C4FDF172A408E1500F39651 /* Assets.xcassets */,
 				4C4FDF192A408E1500F39651 /* Preview Content */,
 			);
@@ -354,11 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4FDF162A408E1500F39651 /* ContentView.swift in Sources */,
-				4C4FDF2D2A40979C00F39651 /* ButtonComponent.swift in Sources */,
+				4CFE34222A4334D800F8E1F8 /* CloudKitTaskViewModel.swift in Sources */,
+				4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */,
+				4C4FDF2D2A40979C00F39651 /* ButtonComponentWatch.swift in Sources */,
 				4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */,
+				4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */,
+				4CFE34232A4334E800F8E1F8 /* CloudKitTaskModel.swift in Sources */,
 				4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */,
-				4C4FDF2F2A4099BF00F39651 /* EmotionsView.swift in Sources */,
+				4C4FDF2F2A4099BF00F39651 /* EmotionsViewWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniMeWatch Watch App/MiniMeWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
@@ -435,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniMeWatch Watch App/MiniMeWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
