@@ -58,7 +58,21 @@ struct NovAtividade: View {
                         } .foregroundColor(Color("Icon-Color"))
                         
                         Section(header: Text("Prioridade")){
-                            PriorityPicker().pickerStyle(SegmentedPickerStyle())
+                            VStack {
+                                Picker (
+                                    selection: $priority,
+                                    label: Text("PRIORIDADE"),
+                                    content: {
+                                        Text("Alta").tag("Alta")
+                                        Text("Média").tag("Media")
+                                        Text("Baixa").tag("Baixa")
+                                        
+                                    }).pickerStyle(SegmentedPickerStyle())
+                                    .background(.clear)
+                        
+                                
+
+                            }
                                 .cornerRadius(8)
                                 .listRowBackground(Color("Icon-Color"))
                                 //.shadow(radius: 2, x: 2, y:2)

@@ -42,6 +42,9 @@
 		F8369B732A3B96F50083991D /* CloudKitPocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B722A3B96F50083991D /* CloudKitPocView.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
 		F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A692A379CA300F61AA9 /* ButtonComponent.swift */; };
+		F85BD68E2A433CC400590087 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD68D2A433CC400590087 /* CoreData.swift */; };
+		F85BD6952A433D3100590087 /* MineMe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */; };
+		F85BD6962A433D3100590087 /* MineMe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		F8413A532A37574E00F61AA9 /* MiniME.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniME.xcdatamodel; sourceTree = "<group>"; };
 		F8413A592A37574F00F61AA9 /* MiniME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniME.entitlements; sourceTree = "<group>"; };
 		F8413A692A379CA300F61AA9 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		F85BD68D2A433CC400590087 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineMe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineMe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,7 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
+				F85BD68C2A433CAE00590087 /* CoreData */,
 				49145CB72A4091F000CE1E44 /* Info.plist */,
 				64BF188B2A3B45C100C41AA7 /* Application */,
 				64BF188A2A3B3D0400C41AA7 /* ViewModel */,
@@ -255,6 +262,16 @@
 				64BF188C2A3B45DA00C41AA7 /* Resources */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F85BD68C2A433CAE00590087 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */,
+				F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */,
+				F85BD68D2A433CC400590087 /* CoreData.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,12 +403,15 @@
 				F8369B602A3B5B660083991D /* AdicionarAtividadeView.swift in Sources */,
 				F8369B622A3B5B660083991D /* ContentView.swift in Sources */,
 				0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */,
+				F85BD6962A433D3100590087 /* MineMe+CoreDataProperties.swift in Sources */,
 				F8369B6A2A3B5B9E0083991D /* Persistence.swift in Sources */,
 				F8369B632A3B5B660083991D /* EmotionsView.swift in Sources */,
 				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
 				49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
+				F85BD6952A433D3100590087 /* MineMe+CoreDataClass.swift in Sources */,
+				F85BD68E2A433CC400590087 /* CoreData.swift in Sources */,
 				F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */,
 				F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */,
 				F8369B682A3B5B900083991D /* AtividadesModel.swift in Sources */,

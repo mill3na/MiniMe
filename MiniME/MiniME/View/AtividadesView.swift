@@ -9,23 +9,13 @@ import SwiftUI
 import CloudKit
 
 struct AtividadesView: View {
-
-    let columns = [
-        GridItem(.flexible()),
-    ]
-
-    let atividades: [ActivityModel] = [ActivityModel(titulo: "Yoga", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Skin Care", imagem: "mini", hora: "12:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Leitura", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Comer", imagem: "mini", hora: "11:00", inicio: "mini"),
-    ]
     
     let container = CKContainer(identifier: "iCloud.miniMe")
-
+    
     var body: some View {
         listCloudKitItems(viewModel: TaskViewModel(container: self.container))
     }
-
+    
     struct AtividadesView_Previews: PreviewProvider {
         static var previews: some View {
             AtividadesView()
@@ -36,6 +26,8 @@ struct AtividadesView: View {
 struct listCloudKitItems: View {
     
     @StateObject var viewModel: TaskViewModel
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @State var mineMe: String = "original"
     
     init(viewModel: TaskViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -89,7 +81,7 @@ struct listCloudKitItems: View {
                             .frame(width: 5, height: 70)
                             .foregroundColor(priorityColor(priority: item.priority))
                             
-                        Image("Icon-miniME")
+                        Image(mineMe)
                             .resizable()
                             .frame(width: 60 , height: 60, alignment: .bottom)
                             .padding(12)
@@ -131,7 +123,11 @@ struct listCloudKitItems: View {
 
         } .onAppear {
             viewModel.populateTasks()
+            if let mineMe = fetchMineMe(context: managedObjectContext) {
+                self.mineMe = mineMe.emotion!
+            }
         }
+        
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
