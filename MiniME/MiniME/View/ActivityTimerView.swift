@@ -11,6 +11,8 @@ struct ActivityTimerView: View {
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
     @State private var audioPlayer: AVAudioPlayer?
+
+    @State var timerMessage: String
     var countTo: Int
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
@@ -85,7 +87,7 @@ struct ActivityTimerView: View {
                 .padding()
 
             VStack {
-                Text("MiniMe")
+                Text(timerMessage)
                     .foregroundColor(.black)
                     .padding()
                     .font(Font.custom("MoreSugarThin", size: 30))
@@ -168,6 +170,7 @@ struct ActivityTimerView: View {
     }
 
     func completed() -> Bool {
+        timerMessage = notficationEnd.randomElement()!.body
         return progress() == 1
     }
 
@@ -214,7 +217,7 @@ struct Clock: View {
 
 struct ActivityTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityTimerView(countTo: 0)
+        ActivityTimerView(timerMessage: "YEY", countTo: 0)
     }
 }
 

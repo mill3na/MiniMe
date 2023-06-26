@@ -37,7 +37,7 @@ struct NovAtividade: View {
         } else if self.modoToggle2 == true {
             return NotificationMode.middle.rawValue // Chego já
         } else {
-            return NotificationMode.twice.rawValue // Fico olhando
+            return NotificationMode.startEnd.rawValue // Fico olhando
         }
     }
     

@@ -11,7 +11,7 @@ struct OnboardingView: View {
     @State private var currentPage = 0
     @State private var answer = ""
     @State private var isOnboardingComplete = false
-    
+
     var body: some View {
         ZStack {
             Color("Background-Color")

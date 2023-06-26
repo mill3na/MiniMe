@@ -8,9 +8,19 @@
 import SwiftUI
 import CloudKit
 
+
 @main
 struct MiniMEApp: App {
-    
+//
+//    @State var primeiravez : Bool = false
+//
+//    UserDefaults.standard.set(false, forKey: "primeiravez")
+//
+//    print(UserDefaults.standard.bool(forKey: "has-seen-onboarding"))
+//    // Prints: true
+//    print(UserDefaults.standard.array(forKey: "favorite-stocks"))
+//    // Prints: ["AAPL", "TSLA"]
+
     let persistenceController = PersistenceController.shared
 
     let container = CKContainer(identifier: "iCloud.miniMe")
@@ -18,7 +28,7 @@ struct MiniMEApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                AtividadesView()
+               OnboardingView()
             }
             .onAppear {
                 Notification.checkForPermission()

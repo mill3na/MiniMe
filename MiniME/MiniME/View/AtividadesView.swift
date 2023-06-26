@@ -106,22 +106,43 @@ struct listCloudKitItems: View {
 
                         Spacer()
                         NavigationLink {
-                            ActivityTimerView(countTo: item.minutesTime)
-                                .onAppear {
-                                    // Construindo enum do modo
-                                    let mode = NotificationMode(rawValue: item.mode)!
+                            ActivityTimerView(
+                                timerMessage: notficationStart.randomElement()!.body,
+                                countTo: item.minutesTime
+                            )
+                            .onAppear {
+                                // Construindo enum do modo
+                                let mode = NotificationMode(rawValue: item.mode)!
 
-                                    // Calculando o array de data ([Date]) que haverão notificacoes de acordo com o modo
-                                    let dates: [Date] = mode.notificationDates(
-                                        minutesTime: item.minutesTime
-                                    )
+                                // Calculando o array de data ([Date]) que haverão notificacoes de acordo com o modo
+                                var dates: [Date] = mode.notificationDates(
+                                    minutesTime: item.minutesTime
+                                )
 
-                                    // Agendando uma notifcacao para cada elemento do array de Date anterior
-                                    for date in dates {
-                                        Notification.scheduleNotification(at: date)
-                                    }
-
+                                // Agendar a primeira notification
+                                if !dates.isEmpty {
+                                    let firstDate = dates.remove(at: 0)
+                                    Notification.scheduleNotification(model: notficationStart.randomElement()!, at: firstDate)
                                 }
+
+                                // Agendar a ultima notification
+                                if let lastDate = dates.popLast() {
+                                    Notification.scheduleNotification(model: notficationEnd.randomElement()!, at: lastDate)
+                                }
+
+                                // Agendando uma notifcacao para cada elemento do array de Date anterior
+                                for date in dates {
+                                    switch mode {
+                                        case .each10minutes:
+                                            Notification.scheduleNotification(model: notficationEach10.randomElement()!, at: date)
+                                        case .middle:
+                                            Notification.scheduleNotification(model: notficationMiddle.randomElement()!, at: date)
+                                        case .startEnd:
+                                            print("não é pra passar aqui")
+                                    }
+                                }
+
+                            }
                         } label: {
                         }
                         .buttonStyle(.plain)
@@ -137,7 +158,7 @@ struct listCloudKitItems: View {
                     }
                 }.onDelete(perform: deleteItem)
                 
-            } .navigationTitle("Minhas Atividade")
+            } .navigationTitle("Minhas Atividades")
             .foregroundColor(Color("Icon-Color"))
             .modifier(FormHiddenBackground())
             .background(Color("Background-Color"))

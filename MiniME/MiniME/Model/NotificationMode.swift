@@ -10,7 +10,7 @@ import Foundation
 enum NotificationMode: String {
     case each10minutes = "Vamos juntos"
     case middle = "Chego já"
-    case twice = "Fico olhando"
+    case startEnd = "Fico olhando"
 
     func notificationDates(startDate: Date = Date(), minutesTime: Int) -> [Date] {
         let duration = TimeInterval(exactly: minutesTime)!
@@ -25,7 +25,7 @@ enum NotificationMode: String {
                     startDate: startDate,
                     minuteTimes: duration
                 )
-            case .twice:
+            case .startEnd:
                 return startEnd(
                     startDate: startDate,
                     minuteTimes: duration
@@ -34,13 +34,17 @@ enum NotificationMode: String {
     }
 
     private func middle(startDate: Date = Date(), minuteTimes: TimeInterval) -> [Date] {
-        [startDate.advanced(by: minuteTimes / 2)]
+        [
+            startDate.advanced(by: 3),
+            startDate.advanced(by: minuteTimes / 2),
+            startDate.advanced(by: minuteTimes)
+        ]
     }
 
     //end
     private func startEnd(startDate: Date = Date(), minuteTimes: TimeInterval) -> [Date] {
         [
-            startDate,
+            startDate.advanced(by: 3),
             startDate.advanced(by: minuteTimes)
         ]
     }
@@ -49,7 +53,7 @@ enum NotificationMode: String {
     private func each10Minutes(startDate: Date = Date(), minuteTimes: TimeInterval) -> [Date] {
         var each10MinutesDate = startDate
         let endDate = startEnd(startDate: startDate, minuteTimes: minuteTimes).last!
-        var dates: [Date] = []
+        var dates: [Date] = [startDate.advanced(by: 3)]
 
         // se tiver duração o bastante pra fazer notificacao de 10 em 10 minutos...
         if minuteTimes >= 10 * 60 {

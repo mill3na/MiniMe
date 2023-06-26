@@ -18,6 +18,7 @@
 		640665432A44703E00DDC651 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665422A44703E00DDC651 /* Notifications.swift */; };
 		640665452A44800000DDC651 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665442A44800000DDC651 /* NotificationView.swift */; };
 		640665472A44959300DDC651 /* NotificationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665462A44959300DDC651 /* NotificationMode.swift */; };
+		640665492A49B68200DDC651 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665482A49B68200DDC651 /* NotificationModel.swift */; };
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		640665422A44703E00DDC651 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		640665442A44800000DDC651 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		640665462A44959300DDC651 /* NotificationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMode.swift; sourceTree = "<group>"; };
+		640665482A49B68200DDC651 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */,
 				640665422A44703E00DDC651 /* Notifications.swift */,
 				640665442A44800000DDC651 /* NotificationView.swift */,
+				640665482A49B68200DDC651 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
 				640665432A44703E00DDC651 /* Notifications.swift in Sources */,
+				640665492A49B68200DDC651 /* NotificationModel.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 				F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */,
 				F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */,
