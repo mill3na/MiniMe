@@ -21,6 +21,8 @@ struct MiniMEApp: App {
 //    print(UserDefaults.standard.array(forKey: "favorite-stocks"))
 //    // Prints: ["AAPL", "TSLA"]
 
+    @AppStorage("firstTime") var firstTime: Bool = true
+
     let persistenceController = PersistenceController.shared
 
     let container = CKContainer(identifier: "iCloud.miniMe")
@@ -28,7 +30,11 @@ struct MiniMEApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-               OnboardingView()
+                if firstTime {
+                    OnboardingView().onAppear { firstTime = false }
+                } else {
+                    AtividadesView()
+                }
             }
             .onAppear {
                 Notification.checkForPermission()

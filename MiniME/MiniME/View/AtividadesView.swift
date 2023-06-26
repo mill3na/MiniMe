@@ -14,10 +14,11 @@ struct AtividadesView: View {
         GridItem(.flexible()),
     ]
 
-    let atividades: [ActivityModel] = [ActivityModel(titulo: "Yoga", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Skin Care", imagem: "mini", hora: "12:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Leitura", imagem: "mini", hora: "11:00", inicio: "mini"),
-                                       ActivityModel(titulo: "Comer", imagem: "mini", hora: "11:00", inicio: "mini"),
+    let atividades: [ActivityModel] = [
+        ActivityModel(titulo: "Yoga", imagem: "mini", hora: "11:00", inicio: "mini"),
+        ActivityModel(titulo: "Skin Care", imagem: "mini", hora: "12:00", inicio: "mini"),
+        ActivityModel(titulo: "Leitura", imagem: "mini", hora: "11:00", inicio: "mini"),
+        ActivityModel(titulo: "Comer", imagem: "mini", hora: "11:00", inicio: "mini")
     ]
     
     let container = CKContainer(identifier: "iCloud.miniMe")
@@ -82,13 +83,13 @@ struct listCloudKitItems: View {
         VStack {
             List {
                 ForEach(viewModel.items, id: \.recordId) { item in
-                    
+
                     HStack {
-                        
+
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 5, height: 70)
                             .foregroundColor(priorityColor(priority: item.priority))
-                            
+
                         Image("Icon-miniME")
                             .resizable()
                             .frame(width: 60 , height: 60, alignment: .bottom)
@@ -97,14 +98,13 @@ struct listCloudKitItems: View {
                             Text("\(item.title)")
                                 .font(.title2)
                                 .fontWeight(.medium)
-                            Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes()) min")
+                            Text("\(Clock(counter: 0, countTo: item.minutesTime).counterToMinutes(clockStyle: false))")
 
                                 .font(.none)
                                 .fontWeight(.regular)
-                                
+
                         } .padding(.bottom)
 
-                        Spacer()
                         NavigationLink {
                             ActivityTimerView(
                                 timerMessage: notficationStart.randomElement()!.body,
@@ -156,9 +156,13 @@ struct listCloudKitItems: View {
                             .fill(.white)
                             .shadow(radius: 2, x: 2, y: 2)
                     }
-                }.onDelete(perform: deleteItem)
-                
-            } .navigationTitle("Minhas Atividades")
+                }
+                .onDelete(perform: deleteItem)
+            }
+            .refreshable {
+                viewModel.populateTasks()
+            }
+            .navigationTitle("Minhas Atividades")
             .foregroundColor(Color("Icon-Color"))
             .modifier(FormHiddenBackground())
             .background(Color("Background-Color"))

@@ -105,14 +105,18 @@ struct ActivityTimerView: View {
 
             Spacer()
 
-        } .background(Color("Background-Color")) // vstack
-            .onReceive(timer) { time in
-                if isPaused == false {
-                    initTimer()
-
-
-                }
+        }
+        .background(Color("Background-Color")) // vstack
+        .onReceive(timer) { time in
+            if isPaused == false {
+                initTimer()
             }
+        }
+        .onChange(of: counter) { newValue in
+            if completed() {
+                self.timerMessage = notficationEnd.randomElement()!.body
+            }
+        }
     }
 
     func justlookingNotification() {
@@ -163,14 +167,14 @@ struct ActivityTimerView: View {
 
     func endTimer() {
         self.counter = self.countTo
+        self.timerMessage = notficationEnd.randomElement()!.body
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isFinished = true
-            //            self.showingSheet.toggle()
+            //self.showingSheet.toggle()
         }
     }
 
     func completed() -> Bool {
-        timerMessage = notficationEnd.randomElement()!.body
         return progress() == 1
     }
 
@@ -206,12 +210,38 @@ struct Clock: View {
         }
     }
 
-    func counterToMinutes() -> String {
+    func counterToMinutes(clockStyle: Bool = true) -> String {
         let currentTime = countTo - counter
-        let seconds = currentTime % 60
-        let minutes = Int(currentTime / 60)
 
-        return "\(minutes):\(seconds < 10 ? "0": "")\(seconds)"
+        let seconds = currentTime % 60
+        let hours = Int(currentTime / 3600)
+        let minutes = Int((currentTime % 3600) / 60)
+
+        let sSeconds: String = seconds < 10 ? "0\(seconds)" : "\(seconds)"
+        let sMinutes: String = minutes < 10 ? "0\(minutes)" : "\(minutes)"
+        let sHours: String = hours < 10 ? "0\(hours)" : "\(hours)"
+
+        if clockStyle {
+            return "\(sHours):\(sMinutes):\(sSeconds)"
+        } else {
+
+            if hours != 0, minutes == 0 {
+                return "\(sHours)h"
+            }
+            if  hours != 0, minutes != 0, seconds == 0 {
+                return "\(sHours)h \(sMinutes)m"
+            }
+            if hours == 0, minutes != 0, seconds == 0 {
+                return "\(sMinutes)m"
+            }
+            if hours == 0, minutes != 0, seconds != 0 {
+                return "\(sMinutes)m \(sSeconds)s"
+            }
+            if hours == 0, minutes == 0, seconds != 0 {
+                return "\(sSeconds)s"
+            }
+        }
+        return "\(sHours)h \(sMinutes)m \(sSeconds)s"
     }
 }
 
