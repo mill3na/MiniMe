@@ -36,10 +36,10 @@ struct ActivityTimerView: View {
                     }
                 } label: {
                     Image(systemName: self.isPlaying ? "speaker.wave.2.fill" : "speaker.slash.fill")
-                          .resizable()
-                          .frame(width: 29, height: 24)
-                          .padding(30)
-                          .accentColor(Color("Button-Color"))
+                        .resizable()
+                        .frame(width: 29, height: 24)
+                        .padding(30)
+                        .accentColor(Color("Button-Color"))
                 }
 
                 Spacer()
@@ -79,35 +79,65 @@ struct ActivityTimerView: View {
                 }
 
             }
+
             Clock(counter: counter, countTo: countTo)
                 .font(Font.custom("MoreSugarThin", size: 80))
                 .padding()
 
-                VStack {
-                    Text("MiniMe")
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(Font.custom("MoreSugarThin", size: 30))
-                    HStack {
-                        pauseButtonComponent(text: "Pausar", activity: pause)
-                            .foregroundColor(.white)
-                        Spacer()
-                        ButtonComponent(text: "Finalizar", activity: endTimer)
-                            .sheet(isPresented: $showingSheet) {
-                                FeelingSheet()
-                            }
-                    } .padding(90)
+            VStack {
+                Text("MiniMe")
+                    .foregroundColor(.black)
+                    .padding()
+                    .font(Font.custom("MoreSugarThin", size: 30))
+                HStack {
+                    pauseButtonComponent(text: "Pausar", activity: pause)
+                        .foregroundColor(.white)
+                    Spacer()
+                    ButtonComponent(text: "Finalizar", activity: endTimer)
+                        .sheet(isPresented: $showingSheet) {
+                            FeelingSheet()
+                        }
+                } .padding(90)
 
-                }
+            }
 
             Spacer()
 
         } .background(Color("Background-Color")) // vstack
-        .onReceive(timer) { time in
-            if isPaused == false {
-                initTimer()
+            .onReceive(timer) { time in
+                if isPaused == false {
+                    initTimer()
+
+
+                }
             }
-        }
+    }
+
+    func justlookingNotification() {
+        let identifier = "my-morning-notification"
+        let title = "Nome do modo!"
+        let body = "Mensagem de foco!"
+        // variavel que recebe o tempo que o usuário digitou
+//            let hour = 10
+//            let minute = 58
+        let isDaily = true
+        let notificationCenter = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = .default
+
+        let calendar = Calendar.current
+        var dateComponents = DateComponents(calendar: calendar, timeZone: TimeZone.current)
+//            dateComponents.hour = hour
+//            dateComponents.minute = minute
+
+        // Vai repetir notificações?
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+        notificationCenter.add(request)
     }
 
     func pause() {
@@ -133,7 +163,7 @@ struct ActivityTimerView: View {
         self.counter = self.countTo
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isFinished = true
-//            self.showingSheet.toggle()
+            //            self.showingSheet.toggle()
         }
     }
 

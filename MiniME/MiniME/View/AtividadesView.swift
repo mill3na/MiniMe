@@ -107,7 +107,21 @@ struct listCloudKitItems: View {
                         Spacer()
                         NavigationLink {
                             ActivityTimerView(countTo: item.minutesTime)
-                            
+                                .onAppear {
+                                    // Construindo enum do modo
+                                    let mode = NotificationMode(rawValue: item.mode)!
+
+                                    // Calculando o array de data ([Date]) que haverão notificacoes de acordo com o modo
+                                    let dates: [Date] = mode.notificationDates(
+                                        minutesTime: item.minutesTime
+                                    )
+
+                                    // Agendando uma notifcacao para cada elemento do array de Date anterior
+                                    for date in dates {
+                                        Notification.scheduleNotification(at: date)
+                                    }
+
+                                }
                         } label: {
                         }
                         .buttonStyle(.plain)

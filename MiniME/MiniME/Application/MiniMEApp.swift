@@ -13,11 +13,17 @@ struct MiniMEApp: App {
     
     let persistenceController = PersistenceController.shared
 
+    let container = CKContainer(identifier: "iCloud.miniMe")
+
     var body: some Scene {
         WindowGroup {
-
-            let container = CKContainer(identifier: "iCloud.miniMe")
-            OnboardingView()
+            NavigationStack {
+                AtividadesView()
+            }
+            .onAppear {
+                Notification.checkForPermission()
+            }
+//            OnboardingView()
 //            NovAtividade(viewModel: TaskViewModel(container: container))
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

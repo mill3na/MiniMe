@@ -19,6 +19,7 @@ class TaskViewModel: ObservableObject {
     private var container: CKContainer
     
     @Published var items: [TaskListViewModel] = []
+    @Published var minutesTime: Int = 0
     
     init(container: CKContainer) {
         self.container = container
