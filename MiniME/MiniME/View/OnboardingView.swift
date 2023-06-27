@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @State private var currentPage = 0
     @State private var answer = ""
     @State private var isOnboardingComplete = false
+    @Environment(\.managedObjectContext) var managedObjectContext
 
     var body: some View {
         ZStack {
@@ -69,6 +70,15 @@ struct OnboardingView: View {
                                     .cornerRadius(8)
                                     .padding(.horizontal, 22)
                                     .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                                    .onSubmit {
+                                        printSavedMiniMes(context: managedObjectContext)
+                                        if answer != "" {
+                                            saveName(context: managedObjectContext, name: answer)
+                                        } else {
+                                            saveName(context: managedObjectContext, name: "MineMe")
+
+                                        }
+                                    }
                                 
                                 
                             } else {
@@ -104,7 +114,6 @@ struct OnboardingView: View {
                             .frame(width: 20, height: 10)
                             .foregroundColor(index == currentPage ? Color("Button-Color") : Color("Progress-Color"))
                     }
-                    
                     Spacer()
                 }
                 
@@ -129,7 +138,8 @@ struct OnboardingView: View {
                     Button(action: {
                         if currentPage < 2 {
                             currentPage += 1
-                        } else {
+                        }
+                        else {
                             isOnboardingComplete = true
                         }
                     }) {
