@@ -9,6 +9,9 @@ import SwiftUI
 import CloudKit
 
 struct NovAtividade: View {
+    
+    
+    
     @State private var atividade = ""
     @State private var intervalo = ""
     @State private var modoToggle1 = false
@@ -19,30 +22,26 @@ struct NovAtividade: View {
     @State var priority: String = "Alta"
     @StateObject var viewModel: TaskViewModel
     @StateObject private var timerModel = TimerViewModel()
-    @State var minutos: Int = 0
-
-    @EnvironmentObject var notificationVM: NotificationViewModel
-
     
     
     let container = CKContainer(identifier: "iCloud.miniMe")
     
-    func modo1() {
-
-    }
-
+    
+    
+    
     func checkMode() -> String {
         if self.modoToggle1 == true {
-            return NotificationMode.each10minutes.rawValue // Vamos juntos
+            return "Vamos juntos"
         } else if self.modoToggle2 == true {
-            return NotificationMode.middle.rawValue // Chego já
+            return "Chego já"
         } else {
-            return NotificationMode.startEnd.rawValue // Fico olhando
+            return "Fico olhando"
         }
     }
     
     var body: some View {
-
+        
+        
             VStack {
                 
                 NavigationStack {
@@ -137,14 +136,9 @@ struct NovAtividade: View {
                     // 2
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-//                            let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
-                            viewModel.minutesTime = viewModel.calculateTotalSeconds(
-                                hours: timerModel.selectedHoursAmount,
-                                minutes: timerModel.selectedMinutesAmount,
-                                seconds: timerModel.selectedSecondsAmount
-                            )
+                            let minutesTime = viewModel.calculateTotalSeconds(hours: timerModel.selectedHoursAmount, minutes: timerModel.selectedMinutesAmount, seconds: timerModel.selectedSecondsAmount)
                             print("PRIORITY: \(priority)")
-                            viewModel.saveTask(title: title, priority: String(priority), mode: checkMode(), minutesTime: viewModel.minutesTime)
+                            viewModel.saveTask(title: title, priority: String(priority), mode: checkMode(), minutesTime: minutesTime)
                             self.title = ""
                             didSaveTask = true
                         } label: {
