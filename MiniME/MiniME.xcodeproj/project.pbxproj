@@ -15,6 +15,7 @@
 		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
 		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
 		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
+<<<<<<< HEAD
 		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
 		4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */; };
 		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
@@ -26,6 +27,12 @@
 		4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */; };
 		4CFE34222A4334D800F8E1F8 /* CloudKitTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */; };
 		4CFE34232A4334E800F8E1F8 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */; };
+=======
+		640665432A44703E00DDC651 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665422A44703E00DDC651 /* Notifications.swift */; };
+		640665452A44800000DDC651 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665442A44800000DDC651 /* NotificationView.swift */; };
+		640665472A44959300DDC651 /* NotificationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665462A44959300DDC651 /* NotificationMode.swift */; };
+		640665492A49B68200DDC651 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665482A49B68200DDC651 /* NotificationModel.swift */; };
+>>>>>>> origin/modulos
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -81,6 +88,7 @@
 		49145CB72A4091F000CE1E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49B61F1A2A41144B00802FA3 /* AtividadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
 		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMeWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMeWatchApp.swift; sourceTree = "<group>"; };
 		4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewWatch.swift; sourceTree = "<group>"; };
@@ -91,6 +99,12 @@
 		4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewWatch.swift; sourceTree = "<group>"; };
 		4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewWatch.swift; sourceTree = "<group>"; };
 		4CFE34212A4331C900F8E1F8 /* MiniMeWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniMeWatch Watch App.entitlements"; sourceTree = "<group>"; };
+=======
+		640665422A44703E00DDC651 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		640665442A44800000DDC651 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		640665462A44959300DDC651 /* NotificationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMode.swift; sourceTree = "<group>"; };
+		640665482A49B68200DDC651 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+>>>>>>> origin/modulos
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -182,8 +196,12 @@
 		64BF18892A3B3CC600C41AA7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				640665462A44959300DDC651 /* NotificationMode.swift */,
 				F8369B672A3B5B900083991D /* AtividadesModel.swift */,
 				F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */,
+				640665422A44703E00DDC651 /* Notifications.swift */,
+				640665442A44800000DDC651 /* NotificationView.swift */,
+				640665482A49B68200DDC651 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,8 +414,10 @@
 				49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */,
 				0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */,
 				0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */,
+				640665452A44800000DDC651 /* NotificationView.swift in Sources */,
 				F8369B642A3B5B660083991D /* ActivityTimerView.swift in Sources */,
 				6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */,
+				640665472A44959300DDC651 /* NotificationMode.swift in Sources */,
 				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
 				F8369B712A3B96B90083991D /* CloudKitTaskModel.swift in Sources */,
 				F8369B602A3B5B660083991D /* AdicionarAtividadeView.swift in Sources */,
@@ -409,6 +429,8 @@
 				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
 				49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
+				640665432A44703E00DDC651 /* Notifications.swift in Sources */,
+				640665492A49B68200DDC651 /* NotificationModel.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
 				F85BD6952A433D3100590087 /* MineMe+CoreDataClass.swift in Sources */,
 				F85BD68E2A433CC400590087 /* CoreData.swift in Sources */,
