@@ -19,7 +19,6 @@ class TaskViewModel: ObservableObject {
     private var container: CKContainer
     
     @Published var items: [TaskListViewModel] = []
-    @Published var minutesTime: Int = 0
     
     init(container: CKContainer) {
         self.container = container
@@ -67,7 +66,7 @@ class TaskViewModel: ObservableObject {
     }
     
     // MARK: -- function to fetch tasks
-    func populateTasks() {
+    func populateTasks(completion: @escaping () -> Void = { }) {
         
         var taskList: [Task] = []
         //predicate is true because we want to get everything
@@ -91,6 +90,7 @@ class TaskViewModel: ObservableObject {
                     }
                 DispatchQueue.main.async {
                     self.items = taskList.map(TaskListViewModel.init)
+                    completion()
                 }
 //
             case .failure(let error):

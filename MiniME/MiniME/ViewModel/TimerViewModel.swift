@@ -32,7 +32,7 @@ struct TimerView: View {
                             binding: $model.selectedMinutesAmount)
             TimerPickerView(title: "s",
                             range: model.secondsRange,
-                            binding: $model.selectedSecondsAmount)
+                            binding: $model.selectedHoursAmount)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
 //        .background(.black)
