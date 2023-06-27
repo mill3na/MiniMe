@@ -11,8 +11,6 @@ struct ActivityTimerView: View {
     @State private var showingSheet: Bool = false
     @State private var isPlaying: Bool = false
     @State private var audioPlayer: AVAudioPlayer?
-
-    @State var timerMessage: String
     var countTo: Int
     let audioURL = Bundle.main.url(forResource: "song", withExtension: "mp3")
 
@@ -40,10 +38,10 @@ struct ActivityTimerView: View {
                     }
                 } label: {
                     Image(systemName: self.isPlaying ? "speaker.wave.2.fill" : "speaker.slash.fill")
-                        .resizable()
-                        .frame(width: 29, height: 24)
-                        .padding(30)
-                        .accentColor(Color("Button-Color"))
+                          .resizable()
+                          .frame(width: 29, height: 24)
+                          .padding(30)
+                          .accentColor(Color("Button-Color"))
                 }
 
                 Spacer()
@@ -83,69 +81,40 @@ struct ActivityTimerView: View {
                 }
 
             }
-
             Clock(counter: counter, countTo: countTo)
                 .font(Font.custom("MoreSugarThin", size: 80))
                 .padding()
 
-            VStack {
-                Text(timerMessage)
-                    .foregroundColor(.black)
-                    .padding()
-                    .font(Font.custom("MoreSugarThin", size: 30))
-                HStack {
-                    pauseButtonComponent(text: "Pausar", activity: pause)
-                        .foregroundColor(.white)
-                    Spacer()
-                    ButtonComponent(text: "Finalizar", activity: endTimer)
-                        .sheet(isPresented: $showingSheet) {
-                            FeelingSheet()
-                        }
-                } .padding(90)
+                VStack {
+                    Text("\(mineMeName)")
+                        .foregroundColor(.black)
+                        .padding()
+                        .font(Font.custom("MoreSugarThin", size: 30))
+                    HStack {
+                        pauseButtonComponent(text: "Pausar", activity: pause)
+                            .foregroundColor(.white)
+                        Spacer()
+                        ButtonComponent(text: "Finalizar", activity: endTimer)
+                            .sheet(isPresented: $showingSheet) {
+                                FeelingSheet()
+                            }
+                    } .padding(90)
 
-            }
+                }
 
             Spacer()
 
-        }
-        .background(Color("Background-Color")) // vstack
+        } .background(Color("Background-Color")) // vstack
         .onReceive(timer) { time in
             if isPaused == false {
                 initTimer()
             }
         }
-        .onChange(of: counter) { newValue in
-            if completed() {
-                self.timerMessage = notficationEnd.randomElement()!.body
+        .onAppear {
+            if let mineMeName = fetchMineMe(context: managedObjectContext)?.name {
+                self.mineMeName = mineMeName
             }
         }
-    }
-
-    func justlookingNotification() {
-        let identifier = "my-morning-notification"
-        let title = "Nome do modo!"
-        let body = "Mensagem de foco!"
-        // variavel que recebe o tempo que o usuário digitou
-//            let hour = 10
-//            let minute = 58
-        let isDaily = true
-        let notificationCenter = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        content.sound = .default
-
-        let calendar = Calendar.current
-        var dateComponents = DateComponents(calendar: calendar, timeZone: TimeZone.current)
-//            dateComponents.hour = hour
-//            dateComponents.minute = minute
-
-        // Vai repetir notificações?
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
-        notificationCenter.add(request)
     }
 
     func pause() {
@@ -169,10 +138,9 @@ struct ActivityTimerView: View {
 
     func endTimer() {
         self.counter = self.countTo
-        self.timerMessage = notficationEnd.randomElement()!.body
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isFinished = true
-            //self.showingSheet.toggle()
+//            self.showingSheet.toggle()
         }
     }
 
@@ -212,44 +180,18 @@ struct Clock: View {
         }
     }
 
-    func counterToMinutes(clockStyle: Bool = true) -> String {
+    func counterToMinutes() -> String {
         let currentTime = countTo - counter
-
         let seconds = currentTime % 60
-        let hours = Int(currentTime / 3600)
-        let minutes = Int((currentTime % 3600) / 60)
+        let minutes = Int(currentTime / 60)
 
-        let sSeconds: String = seconds < 10 ? "0\(seconds)" : "\(seconds)"
-        let sMinutes: String = minutes < 10 ? "0\(minutes)" : "\(minutes)"
-        let sHours: String = hours < 10 ? "0\(hours)" : "\(hours)"
-
-        if clockStyle {
-            return "\(sHours):\(sMinutes):\(sSeconds)"
-        } else {
-
-            if hours != 0, minutes == 0 {
-                return "\(sHours)h"
-            }
-            if  hours != 0, minutes != 0, seconds == 0 {
-                return "\(sHours)h \(sMinutes)m"
-            }
-            if hours == 0, minutes != 0, seconds == 0 {
-                return "\(sMinutes)m"
-            }
-            if hours == 0, minutes != 0, seconds != 0 {
-                return "\(sMinutes)m \(sSeconds)s"
-            }
-            if hours == 0, minutes == 0, seconds != 0 {
-                return "\(sSeconds)s"
-            }
-        }
-        return "\(sHours)h \(sMinutes)m \(sSeconds)s"
+        return "\(minutes):\(seconds < 10 ? "0": "")\(seconds)"
     }
 }
 
 struct ActivityTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityTimerView(timerMessage: "YEY", countTo: 0)
+        ActivityTimerView(countTo: 0)
     }
 }
 
