@@ -15,17 +15,10 @@
 		49145CB62A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49145CB52A408D6600CE1E44 /* MoreSugarThin-rgEwB.otf */; };
 		49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B61F1A2A41144B00802FA3 /* AtividadesView.swift */; };
 		49E5AEDA2A40A2050070CCD0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49E5AED92A40A2050070CCD0 /* song.mp3 */; };
-		4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */; };
-		4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */; };
-		4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF172A408E1500F39651 /* Assets.xcassets */; };
-		4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */; };
-		4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */; };
-		4C4FDF2D2A40979C00F39651 /* ButtonComponentWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */; };
-		4C4FDF2F2A4099BF00F39651 /* EmotionsViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */; };
-		4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */; };
-		4CFE34222A4334D800F8E1F8 /* CloudKitTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B6E2A3B96790083991D /* CloudKitTaskViewModel.swift */; };
-		4CFE34232A4334E800F8E1F8 /* CloudKitTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */; };
+		640665432A44703E00DDC651 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665422A44703E00DDC651 /* Notifications.swift */; };
+		640665452A44800000DDC651 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665442A44800000DDC651 /* NotificationView.swift */; };
+		640665472A44959300DDC651 /* NotificationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665462A44959300DDC651 /* NotificationMode.swift */; };
+		640665492A49B68200DDC651 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640665482A49B68200DDC651 /* NotificationModel.swift */; };
 		6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C02A3B4E68002409D6 /* MinimeView.swift */; };
 		6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */; };
 		6459E0C82A3C816F002409D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */; };
@@ -42,34 +35,7 @@
 		F8369B732A3B96F50083991D /* CloudKitPocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8369B722A3B96F50083991D /* CloudKitPocView.swift */; };
 		F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8413A522A37574E00F61AA9 /* MiniME.xcdatamodeld */; };
 		F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8413A692A379CA300F61AA9 /* ButtonComponent.swift */; };
-		F85BD68E2A433CC400590087 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD68D2A433CC400590087 /* CoreData.swift */; };
-		F85BD6952A433D3100590087 /* MineMe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */; };
-		F85BD6962A433D3100590087 /* MineMe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4C4FDF1C2A408E1500F39651 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8413A432A37574E00F61AA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C4FDF102A408E1500F39651;
-			remoteInfo = "MiniMeWatch Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4C4FDF1F2A408E1500F39651 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				4C4FDF1E2A408E1500F39651 /* MiniMeWatch Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D90E8D12A39E201008FD186 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
@@ -81,16 +47,10 @@
 		49145CB72A4091F000CE1E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49B61F1A2A41144B00802FA3 /* AtividadesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadesView.swift; sourceTree = "<group>"; };
 		49E5AED92A40A2050070CCD0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
-		4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniMeWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMeWatchApp.swift; sourceTree = "<group>"; };
-		4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewWatch.swift; sourceTree = "<group>"; };
-		4C4FDF172A408E1500F39651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTimerWatch.swift; sourceTree = "<group>"; };
-		4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponentWatch.swift; sourceTree = "<group>"; };
-		4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewWatch.swift; sourceTree = "<group>"; };
-		4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewWatch.swift; sourceTree = "<group>"; };
-		4CFE34212A4331C900F8E1F8 /* MiniMeWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniMeWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		640665422A44703E00DDC651 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		640665442A44800000DDC651 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		640665462A44959300DDC651 /* NotificationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMode.swift; sourceTree = "<group>"; };
+		640665482A49B68200DDC651 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		6459E0C02A3B4E68002409D6 /* MinimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimeView.swift; sourceTree = "<group>"; };
 		6459E0C22A3B5086002409D6 /* NovaAtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeView.swift; sourceTree = "<group>"; };
 		6459E0C62A3C816F002409D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -109,19 +69,9 @@
 		F8413A532A37574E00F61AA9 /* MiniME.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniME.xcdatamodel; sourceTree = "<group>"; };
 		F8413A592A37574F00F61AA9 /* MiniME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniME.entitlements; sourceTree = "<group>"; };
 		F8413A692A379CA300F61AA9 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
-		F85BD68D2A433CC400590087 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineMe+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineMe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C4FDF0E2A408E1500F39651 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8413A482A37574E00F61AA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,30 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C4FDF122A408E1500F39651 /* MiniMeWatch Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				4CFE34212A4331C900F8E1F8 /* MiniMeWatch Watch App.entitlements */,
-				4C4FDF2E2A4099BF00F39651 /* EmotionsViewWatch.swift */,
-				4C4FDF2C2A40979C00F39651 /* ButtonComponentWatch.swift */,
-				4C4FDF282A408FB000F39651 /* ActivityTimerWatch.swift */,
-				4C4FDF132A408E1500F39651 /* MiniMeWatchApp.swift */,
-				4CFE341F2A43289000F8E1F8 /* InitialViewWatch.swift */,
-				4C4FDF152A408E1500F39651 /* ContentViewWatch.swift */,
-				4C4FDF172A408E1500F39651 /* Assets.xcassets */,
-				4C4FDF192A408E1500F39651 /* Preview Content */,
-			);
-			path = "MiniMeWatch Watch App";
-			sourceTree = "<group>";
-		};
-		4C4FDF192A408E1500F39651 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4C4FDF1A2A408E1500F39651 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		6459E0C52A3C816F002409D6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +108,12 @@
 		64BF18892A3B3CC600C41AA7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				640665462A44959300DDC651 /* NotificationMode.swift */,
 				F8369B672A3B5B900083991D /* AtividadesModel.swift */,
 				F8369B702A3B96B90083991D /* CloudKitTaskModel.swift */,
+				640665422A44703E00DDC651 /* Notifications.swift */,
+				640665442A44800000DDC651 /* NotificationView.swift */,
+				640665482A49B68200DDC651 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				F8413A4D2A37574E00F61AA9 /* MiniME */,
-				4C4FDF122A408E1500F39651 /* MiniMeWatch Watch App */,
 				F8413A4C2A37574E00F61AA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -230,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				F8413A4B2A37574E00F61AA9 /* MiniME.app */,
-				4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,7 +166,6 @@
 		F8413A4D2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXGroup;
 			children = (
-				F85BD68C2A433CAE00590087 /* CoreData */,
 				49145CB72A4091F000CE1E44 /* Info.plist */,
 				64BF188B2A3B45C100C41AA7 /* Application */,
 				64BF188A2A3B3D0400C41AA7 /* ViewModel */,
@@ -264,36 +191,9 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		F85BD68C2A433CAE00590087 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				F85BD6932A433D3100590087 /* MineMe+CoreDataClass.swift */,
-				F85BD6942A433D3100590087 /* MineMe+CoreDataProperties.swift */,
-				F85BD68D2A433CC400590087 /* CoreData.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C4FDF222A408E1500F39651 /* Build configuration list for PBXNativeTarget "MiniMeWatch Watch App" */;
-			buildPhases = (
-				4C4FDF0D2A408E1500F39651 /* Sources */,
-				4C4FDF0E2A408E1500F39651 /* Frameworks */,
-				4C4FDF0F2A408E1500F39651 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MiniMeWatch Watch App";
-			productName = "MiniMeWatch Watch App";
-			productReference = 4C4FDF112A408E1500F39651 /* MiniMeWatch Watch App.app */;
-			productType = "com.apple.product-type.application";
-		};
 		F8413A4A2A37574E00F61AA9 /* MiniME */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8413A5F2A37574F00F61AA9 /* Build configuration list for PBXNativeTarget "MiniME" */;
@@ -301,12 +201,10 @@
 				F8413A472A37574E00F61AA9 /* Sources */,
 				F8413A482A37574E00F61AA9 /* Frameworks */,
 				F8413A492A37574E00F61AA9 /* Resources */,
-				4C4FDF1F2A408E1500F39651 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C4FDF1D2A408E1500F39651 /* PBXTargetDependency */,
 			);
 			name = MiniME;
 			productName = MiniME;
@@ -323,9 +221,6 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					4C4FDF102A408E1500F39651 = {
-						CreatedOnToolsVersion = 14.3.1;
-					};
 					F8413A4A2A37574E00F61AA9 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -345,21 +240,11 @@
 			projectRoot = "";
 			targets = (
 				F8413A4A2A37574E00F61AA9 /* MiniME */,
-				4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C4FDF0F2A408E1500F39651 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C4FDF1B2A408E1500F39651 /* Preview Assets.xcassets in Resources */,
-				4C4FDF182A408E1500F39651 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8413A492A37574E00F61AA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,21 +259,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C4FDF0D2A408E1500F39651 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CFE34222A4334D800F8E1F8 /* CloudKitTaskViewModel.swift in Sources */,
-				4C4FDF162A408E1500F39651 /* ContentViewWatch.swift in Sources */,
-				4C4FDF2D2A40979C00F39651 /* ButtonComponentWatch.swift in Sources */,
-				4C4FDF292A408FB000F39651 /* ActivityTimerWatch.swift in Sources */,
-				4CFE34202A43289000F8E1F8 /* InitialViewWatch.swift in Sources */,
-				4CFE34232A4334E800F8E1F8 /* CloudKitTaskModel.swift in Sources */,
-				4C4FDF142A408E1500F39651 /* MiniMeWatchApp.swift in Sources */,
-				4C4FDF2F2A4099BF00F39651 /* EmotionsViewWatch.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F8413A472A37574E00F61AA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,22 +266,23 @@
 				49B61F1B2A41144B00802FA3 /* AtividadesView.swift in Sources */,
 				0D90E8D42A39E255008FD186 /* TimerViewModel.swift in Sources */,
 				0D90E8D22A39E201008FD186 /* TimerPickerView.swift in Sources */,
+				640665452A44800000DDC651 /* NotificationView.swift in Sources */,
 				F8369B642A3B5B660083991D /* ActivityTimerView.swift in Sources */,
 				6459E0C12A3B4E68002409D6 /* MinimeView.swift in Sources */,
+				640665472A44959300DDC651 /* NotificationMode.swift in Sources */,
 				F8413A6A2A379CA300F61AA9 /* ButtonComponent.swift in Sources */,
 				F8369B712A3B96B90083991D /* CloudKitTaskModel.swift in Sources */,
 				F8369B602A3B5B660083991D /* AdicionarAtividadeView.swift in Sources */,
 				F8369B622A3B5B660083991D /* ContentView.swift in Sources */,
 				0D90E8DA2A3BE564008FD186 /* ToggleView.swift in Sources */,
-				F85BD6962A433D3100590087 /* MineMe+CoreDataProperties.swift in Sources */,
 				F8369B6A2A3B5B9E0083991D /* Persistence.swift in Sources */,
 				F8369B632A3B5B660083991D /* EmotionsView.swift in Sources */,
 				6459E0C32A3B5086002409D6 /* NovaAtividadeView.swift in Sources */,
 				49145CB42A408B1800CE1E44 /* OnboardingView.swift in Sources */,
 				0D90E8D62A39E28E008FD186 /* PickerPropriedadeView.swift in Sources */,
+				640665432A44703E00DDC651 /* Notifications.swift in Sources */,
+				640665492A49B68200DDC651 /* NotificationModel.swift in Sources */,
 				F8413A542A37574E00F61AA9 /* MiniME.xcdatamodeld in Sources */,
-				F85BD6952A433D3100590087 /* MineMe+CoreDataClass.swift in Sources */,
-				F85BD68E2A433CC400590087 /* CoreData.swift in Sources */,
 				F8369B6F2A3B96790083991D /* CloudKitTaskViewModel.swift in Sources */,
 				F8369B662A3B5B840083991D /* MiniMEApp.swift in Sources */,
 				F8369B682A3B5B900083991D /* AtividadesModel.swift in Sources */,
@@ -421,78 +292,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4C4FDF1D2A408E1500F39651 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4C4FDF102A408E1500F39651 /* MiniMeWatch Watch App */;
-			targetProxy = 4C4FDF1C2A408E1500F39651 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4C4FDF202A408E1500F39651 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MiniMeWatch Watch App/MiniMeWatch Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 88KH7Y2P56;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniMeWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada.maia.MiniME;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Debug;
-		};
-		4C4FDF212A408E1500F39651 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MiniMeWatch Watch App/MiniMeWatch Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MiniMeWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 88KH7Y2P56;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniMeWatch;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada.maia.MiniME;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada.maia.MiniME.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Release;
-		};
 		F8413A5D2A37574F00F61AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -605,7 +405,6 @@
 		F8413A602A37574F00F61AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniME/MiniME.entitlements;
@@ -647,7 +446,6 @@
 		F8413A612A37574F00F61AA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MiniME/MiniME.entitlements;
@@ -689,15 +487,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C4FDF222A408E1500F39651 /* Build configuration list for PBXNativeTarget "MiniMeWatch Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C4FDF202A408E1500F39651 /* Debug */,
-				4C4FDF212A408E1500F39651 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F8413A462A37574E00F61AA9 /* Build configuration list for PBXProject "MiniME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

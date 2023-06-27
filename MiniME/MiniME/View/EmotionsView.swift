@@ -16,9 +16,8 @@ struct FeelingSheet: View {
     @State var triste = false
     @State var muitoFeliz = false
     @State var muitoTriste = false
-    @State var mineMeImage: String = "original"
-    @Environment(\.managedObjectContext) var managedObjectContext
-    
+    @State var miniMe = "original"
+    @AppStorage("username") var username: String = "feeling"
 
     var body: some View {
         NavigationStack{
@@ -31,7 +30,7 @@ struct FeelingSheet: View {
                         .foregroundColor(.black)
                         .font(Font.custom("MoreSugarThin", size: 40))
 
-                    Image(mineMeImage)
+                    Image(miniMe)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 350)
@@ -40,7 +39,7 @@ struct FeelingSheet: View {
 
                         Button {
                             triste.toggle()
-                            self.mineMeImage = "feliz"
+                            self.miniMe = "feliz"
 
                         } label: {
                             Text("🥰")
@@ -63,7 +62,7 @@ struct FeelingSheet: View {
                         }
                         Button {
                             feliz.toggle()
-                            self.mineMeImage = "superfeliz"
+                            self.miniMe = "superfeliz"
                         } label: {
                             Text("😁")
                                 .font(.system(size: 25))
@@ -86,7 +85,7 @@ struct FeelingSheet: View {
                         }
                         Button {
                             triste.toggle()
-                            self.mineMeImage = "triste"
+                            self.miniMe = "triste"
                         } label: {
                             Text("☹️")
                                 .font(.system(size: 25))
@@ -110,7 +109,7 @@ struct FeelingSheet: View {
 
                         Button {
                             muitoFeliz.toggle()
-                            self.mineMeImage = "supertriste"
+                            self.miniMe = "supertriste"
                         } label: {
                             Text("😭")
                                 .font(.system(size: 25))
@@ -137,7 +136,6 @@ struct FeelingSheet: View {
                     }
                     //mudamos de botao e dismiss para navigation
                     Button {
-                        updateMiniMe(emotion: mineMeImage, context: managedObjectContext)
                         dismiss()
                     } label: {
                         Text("Continuar")
